@@ -1,5 +1,11 @@
 {
   "compilerOptions": {
+    "baseUrl": "src",
+    "paths": {
+      "~/*": [
+        "./*"
+      ],
+    },
     "target": "es5",
     "lib": [
       "dom",
@@ -14,13 +20,21 @@
     "forceConsistentCasingInFileNames": true,
     "noFallthroughCasesInSwitch": true,
     "module": "esnext",
+    "declaration": true,
+    "declarationDir": "types",
+    "sourceMap": true,
+    "outDir": "./dist", 
     "moduleResolution": "node",
+    "emitDeclarationOnly": true,
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "noEmit": true,
-    "jsx": "react-jsx"
+    "strictNullChecks": true,
+    "noImplicitAny": true,
+    "removeComments": true,
+    "jsx": "react-jsx",
+    "typeRoots": ["index.d.ts", "node_modules/@types"]
   },
   "include": [
-    "src"
+    "src/components"
   ]
 }
