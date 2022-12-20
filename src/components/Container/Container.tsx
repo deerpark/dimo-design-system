@@ -1,6 +1,6 @@
 import { PropsWithChildren } from 'react'
 import cx from 'classnames'
-import { CommonProps } from '~/interfaces'
+import { CommonProps } from '../../interfaces'
 
 export default function Container({ children, className, ...props }: PropsWithChildren<CommonProps>) {
   const classNames = cx({

@@ -1,6 +1,6 @@
 import { PropsWithChildren } from 'react'
 import cx from 'classnames'
-import { CommonProps, StyleOptionProps } from '~/interfaces'
+import { CommonProps, StyleOptionProps } from '../../interfaces'
 
 type ButtonStyleProps = Pick<Required<StyleOptionProps<{}>>, 'size' | 'variant'>
 
