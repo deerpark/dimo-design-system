@@ -4,6 +4,13 @@
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
   "style": "dist/index.css",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/deerpark/dimo-design-system.git",
+    "directory": "packages/react"
+  },
+  "homepage": "https://dimo.gsshop.com/design-system",
+  "bugs": "https://github.com/deerpark/dimo-design-system/issues",
   "files": [
     "dist"
   ],
