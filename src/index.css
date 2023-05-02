@@ -4,7 +4,7 @@
 
 @layer base {
   body {
-    @apply bg-default-50 dark:bg-default-950 text-default-600 dark:text-default-300;
+    @apply bg-background-primary dark:bg-inverse-background-primary text-content-secondary dark:text-inverse-content-secondary;
   }
 }
 

@@ -16,10 +16,8 @@ export default function Box({
       'group-hover:opacity-75': true,
     },
     {
-      'bg-default-50': true,
-      'dark:bg-default-900': true,
-      'border-default-400': border,
-      'dark:border-default-600': border,
+      'bg-background-primary dark:bg-inverse-background-primary': true,
+      'border-border-secondary dark:border-inverse-border-secondary': border,
     },
     className
   )
