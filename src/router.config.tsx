@@ -1,7 +1,7 @@
 import { createBrowserRouter, Navigate, DataRouteObject } from 'react-router-dom'
 import { RootLayout, Error, Layout } from './components/Layout'
 import Main from './components/Main'
-import { Button } from './components'
+import ButtonPage from './components/Docs/Button'
 
 export const routes: DataRouteObject[] = [
   {
@@ -24,7 +24,7 @@ export const routes: DataRouteObject[] = [
           {
             index: true,
             id: 'design-system-index',
-            element: <Navigate to={`components`} replace={true} />, // 리디렉션 : design-system/components
+            element: <Navigate to={`/design-system/components`} replace={true} />, // 리디렉션 : design-system/components
           },
           {
             path: 'components',
@@ -34,15 +34,27 @@ export const routes: DataRouteObject[] = [
             children: [
               {
                 index: true,
-                path: 'inputs',
-                id: 'components-inputs',
-                element: <Navigate to={`button`} replace={true} />, // 리디렉션 : design-system/components/button/inputs
+                id: 'components-index',
+                element: <Navigate to={`/design-system/components/inputs`} replace={true} />, // 리디렉션 : design-system/components/inputs/button
               },
               {
-                path: 'button',
-                id: 'components-inputs-button',
-                element: <Button />,
+                path: 'inputs',
+                id: 'components-inputs',
+                element: <Layout.Contents />,
                 errorElement: <Error />,
+                children: [
+                  {
+                    index: true,
+                    id: 'components-inputs-index',
+                    element: <Navigate to={`/design-system/components/inputs/button`} replace={true} />, // 리디렉션 : design-system/components/button/inputs
+                  },
+                  {
+                    path: 'button',
+                    id: 'components-inputs-button',
+                    element: <ButtonPage />,
+                    errorElement: <Error />,
+                  },
+                ],
               },
             ],
           },

@@ -7,6 +7,8 @@ export type StyleOptionProps<P> = P & {
   border?: boolean,
   primary?: boolean,
   variant?: ComponentVariant,
+  shadow?: boolean,
+  padding?: boolean,
 }
 
 export type CommonProps = {

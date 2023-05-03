@@ -8,10 +8,11 @@
 // TBD
 
 ## Installation
+
 DDS is available as an [npm package](https://www.npmjs.com/package/dimo-design-system).
 
 ```sh
-npm install @deerpark/dimo-design-system --save
+npm install dimo-design-system --save
 ```
 
 ## Usage
@@ -19,7 +20,7 @@ npm install @deerpark/dimo-design-system --save
 Here is a quick example to get you started, **it's all you need**:
 
 ```jsx
-import { Button, ButtonGroup } from '@deerpark/dimo-design-system'
+import { Button, ButtonGroup } from 'dimo-design-system'
 
 function App() {
   return (

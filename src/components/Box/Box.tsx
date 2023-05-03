@@ -7,12 +7,16 @@ export default function Box({
   className,
   border,
   rounded,
+  padding,
+  shadow,
   ...props
 }: PropsWithChildren<StyleOptionProps<CommonProps>>) {
   const classnames = cx(
     {
       'rounded-md': rounded,
       'border-px': border,
+      'shadow dark:dhadow-dk': shadow,
+      'p-5': padding,
       'group-hover:opacity-75': true,
     },
     {

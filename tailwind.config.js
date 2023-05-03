@@ -4,6 +4,7 @@ const colors = require('./src/colors.config')
 
 module.exports = {
   darkMode: 'class',
+  content: ['./src/**/*.{js,jsx,ts,tsx}'],
   theme: {
     extend: {
       screens: {
@@ -46,19 +47,21 @@ module.exports = {
         3: '3px',
       },
       boxShadow: {
-        xs: '0 1px 1.5px 0 rgba(19, 23, 27, 0.03)',
-        sm: '0 1px 0px -1px rgba(19, 23, 27,  0.5), 0 1px 3px -1px rgba(19, 23, 27,  0.2)',
-        DEFAULT: '0 1px 1px -1px rgba(19, 23, 27,  0.5), 0 1px 5px -1px rgba(19, 23, 27,  0.2)',
+        xs: '0 1px 1.5px 0 rgba(19, 23, 27, 0.01)',
+        dkxs: '0 1px 3px -1px rgba(0, 0, 0, 0.2)',
+        sm: '0 1px 0px -1px rgba(19, 23, 27,  0.3), 0 1px 3px -1px rgba(19, 23, 27,  0.05)',
+        dksm: '0 1px 3px -1px rgba(0, 0, 0,  0.3)',
+        DEFAULT: '0 1px 1px -1px rgba(19, 23, 27,  0.3), 0 1px 5px -1px rgba(19, 23, 27,  0.1)',
+        dk: '0 1px 3px -1px rgba(0, 0, 0,  0.3)',
         md: '0 2px 1px -1px rgba(19, 23, 27,  0.07), 0 2px 6px -1px rgba(19, 23, 27,  0.2)',
-        lg: '0px 10px 15px -3px rgba(0, 0, 0, 0.1), 0px 4px 6px -2px rgba(0, 0, 0, 0.05), 0px 0px 0px 1px rgba(0, 0, 0, 0.05)',
-        dkxs: '0 1px 3px -1px rgba(0, 0, 0, 0.5)',
-        dksm: '0 1px 3px -1px rgba(0, 0, 0,  0.5)',
-        dk: '0 1px 3px -1px rgba(0, 0, 0,  0.5)',
         dkmd: '0 1px 3px -1px rgba(0, 0, 0,  0.5)',
+        lg: '0px 10px 15px -3px rgba(0, 0, 0, 0.1), 0px 4px 6px -2px rgba(0, 0, 0, 0.05), 0px 0px 0px 1px rgba(0, 0, 0, 0.05)',
         dklg: '0 4px 20px -1px rgba(0, 0, 0,  0.5)',
+        '2xl': '0 8px 40px -1px rgba(0, 0, 0,  0.07)',
         dk2xl: '0 8px 40px -1px rgba(0, 0, 0,  0.5)',
         mini: '0 3px 16px -1px rgba(0, 0, 0,  0.05)',
-        tooltip: '0 4px 20px -1px rgba(0, 0, 0,  0.08)',
+        dkmini: '0 3px 16px -1px rgba(0, 0, 0,  0.3)',
+        tooltip: '0 4px 20px -1px rgba(0, 0, 0,  0.07)',
         dktooltip: '0 4px 20px -1px rgba(0, 0, 0,  0.5)',
       },
       dropShadow: {

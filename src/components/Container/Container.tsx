@@ -3,10 +3,13 @@ import cx from 'classnames'
 import { CommonProps } from '../../interfaces'
 
 export default function Container({ children, className, ...props }: PropsWithChildren<CommonProps>) {
-  const classNames = cx({
-    'mx-auto': true,
-    container: true,
-  })
+  const classNames = cx(
+    {
+      'mx-auto': true,
+      container: true,
+    },
+    className
+  )
   return (
     <div className={classNames} {...props}>
       {children}
@@ -15,11 +18,14 @@ export default function Container({ children, className, ...props }: PropsWithCh
 }
 
 Container.Root = ({ children, className, ...props }: PropsWithChildren<CommonProps>) => {
-  const classNames = cx({
-    'min-h-screen': true,
-    'min-w-screen': true,
-    'flex-centered': true,
-  })
+  const classNames = cx(
+    {
+      'min-h-screen': true,
+      'min-w-screen': true,
+      'flex-centered': true,
+    },
+    className
+  )
   return (
     <div className={classNames} {...props}>
       {children}

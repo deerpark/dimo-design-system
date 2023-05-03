@@ -45,12 +45,12 @@
     "@headlessui/react": "^1.7.14",
     "@tailwindcss/aspect-ratio": "^0.4.2",
     "@tailwindcss/forms": "^0.5.3",
+    "autoprefixer": "^10.4.14",
     "classnames": "^2.3.2",
+    "postcss": "^8.4.23",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.11.0",
-    "autoprefixer": "^10.4.14",
-    "postcss": "^8.4.23",
     "tailwindcss": "^3.3.2"
   },
   "devDependencies": {
@@ -82,5 +82,8 @@
   },
   "volta": {
     "node": "16.18.1"
+  },
+  "dependencies": {
+    "@headlessui/tailwindcss": "^0.1.3"
   }
 }
