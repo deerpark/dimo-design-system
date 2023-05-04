@@ -1,4 +1,4 @@
-import { Container, Button, Box } from '../../'
+import { Container, Button, Box, ButtonGroup } from '../../'
 
 export default function ButtonPage() {
   return (
@@ -48,7 +48,7 @@ export default function ButtonPage() {
             CATV
           </Button>
           <Button variant='outline'>MC/PC</Button>
-          <Button variant='outline' size='sm'>
+          <Button variant='outline' size='sm' badge>
             시청가구
           </Button>
           <Button variant='outline' size='xs'>
@@ -71,20 +71,20 @@ export default function ButtonPage() {
           </Button>
         </Box>
         <Box className='flex items-center mb-2 gap-x-2' padding rounded border shadow>
-          <Button.Group>
+          <ButtonGroup>
             <Button>상품평</Button>
             <Button>내 방송 기준(한달)</Button>
-          </Button.Group>
+          </ButtonGroup>
         </Box>
         <Box className='flex items-center mb-2 gap-x-2' padding rounded border shadow>
-          <Button.Group>
+          <ButtonGroup>
             <Button variant='outline'>닫기</Button>
             <Button variant='outline'>확인</Button>
             <Button variant='outline'>테스트</Button>
-          </Button.Group>
+          </ButtonGroup>
         </Box>
         <Box className='flex items-center mb-2 gap-x-2' padding rounded border shadow>
-          <Button.Group>
+          <ButtonGroup>
             <Button variant='ghost'>
               <svg width='16' height='16' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'>
                 <path
@@ -95,7 +95,7 @@ export default function ButtonPage() {
                 ></path>
               </svg>
             </Button>
-          </Button.Group>
+          </ButtonGroup>
         </Box>
       </Container>
     </Container.Root>
