@@ -91,7 +91,7 @@ function Button({
   return (
     <button ref={ref} type={type} className={classnames} {...props}>
       {children}
-      {badge && <span className="bg-brand-sunsetPink dark:bg-inverse-brand-sunsetPink w-1 h-1 absolute -top-0.5 -right-0.5 rounded-full" />}
+      {badge && <span className="bg-brand-sunsetPink dark:bg-inverse-brand-sunsetPink w-1 h-1 absolute top-1 right-1 rounded-full" />}
     </button>
   )
 }
