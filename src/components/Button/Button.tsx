@@ -90,7 +90,7 @@ function Button({
     className
   )
   return (
-    <button ref={ref} type={type} className={classnames} {...props}>
+    <button ref={ref} type={type} className={classnames} title={title} {...props}>
       {children}
       {badge && <span className="bg-brand-sunsetPink dark:bg-inverse-brand-sunsetPink w-1 h-1 absolute top-0.5 right-0.5 rounded-full" />}
     </button>
