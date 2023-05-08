@@ -4,7 +4,7 @@ import cx from 'classnames'
 import { CommonProps, StyleOptionProps } from '../../interfaces'
 
 type ButtonStyleProps = Pick<Required<StyleOptionProps<{}>>, 'size' | 'variant'>
-type ButtonProps = PropsWithChildren<StyleOptionProps<CommonProps>> & { badge?: boolean, type?: 'button' | 'submit' | 'reset' | undefined }
+type ButtonProps = PropsWithChildren<StyleOptionProps<CommonProps>> & { badge?: boolean, type?: 'button' | 'submit' | 'reset' | undefined, title?: string }
 
 /* Buttton props에 따른 클래스 객체 리턴 */
 const getClasses = ({ size, variant }: ButtonStyleProps) => {
@@ -72,6 +72,7 @@ function Button({
   size = 'base',
   variant = 'solid',
   type = 'button',
+  title = "",
   ...props
 }: ButtonProps, ref: Ref<HTMLButtonElement>) {
   const classnames = cx(
@@ -91,7 +92,7 @@ function Button({
   return (
     <button ref={ref} type={type} className={classnames} {...props}>
       {children}
-      {badge && <span className="bg-brand-sunsetPink dark:bg-inverse-brand-sunsetPink w-1 h-1 absolute top-1 right-1 rounded-full" />}
+      {badge && <span className="bg-brand-sunsetPink dark:bg-inverse-brand-sunsetPink w-1 h-1 absolute top-0.5 right-0.5 rounded-full" />}
     </button>
   )
 }
