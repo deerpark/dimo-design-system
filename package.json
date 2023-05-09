@@ -1,6 +1,6 @@
 {
   "name": "dimo-design-system",
-  "version": "0.1.11",
+  "version": "0.1.12",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
   "style": "dist/index.css",
