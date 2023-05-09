@@ -13,5 +13,5 @@ export type StyleOptionProps<P> = P & {
 
 export type CommonProps = {
   className?: string,
-  onClick?: () => void,
+  onClick?: React.MouseEventHandler<HTMLButtonElement>,
 }
