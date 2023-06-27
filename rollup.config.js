@@ -22,10 +22,16 @@ export default [
         format: 'esm',
       },
     ],
-    plugins: [external(), resolve(), commonjs(), typescript({ tsconfig: './tsconfig.json' }), postcss()],
+    plugins: [
+      external(),
+      resolve(),
+      commonjs(),
+      typescript({ tsconfig: './tsconfig.json' }),
+      postcss(),
+    ],
   },
   {
-    input: 'dist/esm/types/index.d.ts',
+    input: 'dist/esm/types/package.d.ts',
     output: [{ file: 'dist/index.d.ts', format: 'esm' }],
     external: [/\.css$/],
     plugins: [dts.default()],
