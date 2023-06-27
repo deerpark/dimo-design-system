@@ -101,7 +101,6 @@ export const Group = ({ children }: PropsWithChildren<StyleOptionProps<CommonPro
   const classnames = cx({
     'inline-flex items-stretch gap-0 button-group group/button': true,
   })
-  if (Array.isArray(children)) console.dir(children.length)
   return <div className={classnames}>{children}</div>
 }
 

@@ -20,8 +20,7 @@ export default function Container({ children, className, ...props }: PropsWithCh
 Container.Root = ({ children, className, ...props }: PropsWithChildren<CommonProps>) => {
   const classNames = cx(
     {
-      'min-h-screen': true,
-      'min-w-screen': true,
+      'flex-1': true,
       'flex-centered': true,
     },
     className

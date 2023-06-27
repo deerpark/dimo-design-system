@@ -16,3 +16,27 @@ export type CommonProps = {
   onClick?: React.MouseEventHandler<HTMLButtonElement | HTMLDivElement>,
   style?: React.CSSProperties,
 }
+
+export type SubSubItem = {
+  name: string,
+  href: string,
+  current?: boolean,
+}
+
+export type SubItem = {
+  name: string,
+  href: string,
+  current?: boolean,
+  children?: SubSubItem[],
+}
+
+export type NavigationItem = {
+  name: string,
+  href?: string,
+  current?: boolean,
+  children?: SubItem[],
+}
+
+export type NavigationType = {
+  [key: string]: NavigationItem[],
+}

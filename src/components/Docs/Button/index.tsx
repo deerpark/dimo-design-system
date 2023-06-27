@@ -4,6 +4,10 @@ export default function ButtonPage() {
   return (
     <Container.Root>
       <Container className='flex flex-col gap-y-5'>
+        <div id='solid'>
+          <h3 className='text-base font-bold'>Solid</h3>
+          <p className='text-xs opacity-50 font-mono'>variants="solid"</p>
+        </div>
         <Box className='flex items-center mb-2 gap-x-2' padding rounded border shadow>
           <Button size='xl'>경쟁사편성</Button>
           <Button size='lg'>외부채널 편성</Button>
@@ -14,8 +18,8 @@ export default function ButtonPage() {
                 fill='currentColor'
               ></path>
               <path
-                fill-rule='evenodd'
-                clip-rule='evenodd'
+                fillRule='evenodd'
+                clipRule='evenodd'
                 d='M20 6h-5.94l1.72-1.72a.751.751 0 0 0-1.06-1.06l-2.732 2.732L9.28 3.245a.75.75 0 0 0-1.062 1.06L9.915 6H4a3 3 0 0 0-3 3v9a3 3 0 0 0 3 3h16a3 3 0 0 0 3-3V9a3 3 0 0 0-3-3Zm1.5 12c0 .827-.673 1.5-1.5 1.5H4c-.827 0-1.5-.673-1.5-1.5V9c0-.827.673-1.5 1.5-1.5h16c.827 0 1.5.673 1.5 1.5v9Z'
                 fill='currentColor'
               ></path>
@@ -30,8 +34,8 @@ export default function ButtonPage() {
               className='flex-none transition-all'
             >
               <path
-                fill-rule='evenodd'
-                clip-rule='evenodd'
+                fillRule='evenodd'
+                clipRule='evenodd'
                 d='M17 9.75a.75.75 0 0 0-.75-.75h-8.5a.75.75 0 0 0-.528 1.282l4.191 4.43A.746.746 0 0 0 12 15c.24 0 .45-.114.587-.289l4.192-4.429A.749.749 0 0 0 17 9.75Z'
                 fill='currentColor'
               ></path>
@@ -40,6 +44,10 @@ export default function ButtonPage() {
           <Button size='sm'>편성정보 조회</Button>
           <Button size='xs'>초기화</Button>
         </Box>
+        <div id='outline'>
+          <h3 className='text-base font-bold top-10'>Outline</h3>
+          <p className='text-xs opacity-50 font-mono'>variants="outline"</p>
+        </div>
         <Box className='flex items-center mb-2 gap-x-2' padding rounded border shadow>
           <Button variant='outline' size='xl'>
             프로그램 전체
@@ -55,6 +63,10 @@ export default function ButtonPage() {
             주문콜
           </Button>
         </Box>
+        <div id='ghost'>
+          <h3 className='text-base font-bold top-10'>Ghost</h3>
+          <p className='text-xs opacity-50 font-mono'>variants="ghost"</p>
+        </div>
         <Box className='flex items-center mb-2 gap-x-2' padding rounded border shadow>
           <Button variant='ghost' size='xl'>
             순주문
@@ -70,12 +82,20 @@ export default function ButtonPage() {
             SR
           </Button>
         </Box>
+        <div id='group-solid'>
+          <h3 className='text-base font-bold top-10'>Group + Solid</h3>
+          <p className='text-xs opacity-50 font-mono'>variants="solid"</p>
+        </div>
         <Box className='flex items-center mb-2 gap-x-2' padding rounded border shadow>
           <ButtonGroup>
             <Button>상품평</Button>
             <Button>내 방송 기준(한달)</Button>
           </ButtonGroup>
         </Box>
+        <div id='group-outline'>
+          <h3 className='text-base font-bold top-10'>Group + Outline</h3>
+          <p className='text-xs opacity-50 font-mono'>variants="outline"</p>
+        </div>
         <Box className='flex items-center mb-2 gap-x-2' padding rounded border shadow>
           <ButtonGroup>
             <Button variant='outline'>닫기</Button>
@@ -83,13 +103,17 @@ export default function ButtonPage() {
             <Button variant='outline'>테스트</Button>
           </ButtonGroup>
         </Box>
+        <div id='ghost-icon-only'>
+          <h3 className='text-base font-bold top-10'>Ghost + Icon only</h3>
+          <p className='text-xs opacity-50 font-mono'>variants="ghost"</p>
+        </div>
         <Box className='flex items-center mb-2 gap-x-2' padding rounded border shadow>
           <ButtonGroup>
             <Button variant='ghost'>
               <svg width='16' height='16' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'>
                 <path
-                  fill-rule='evenodd'
-                  clip-rule='evenodd'
+                  fillRule='evenodd'
+                  clipRule='evenodd'
                   d='M3.5 10c0-3.584 2.916-6.5 6.5-6.5s6.5 2.916 6.5 6.5-2.916 6.5-6.5 6.5A6.508 6.508 0 0 1 3.5 10Zm18.207 10.293L16.315 14.9A7.957 7.957 0 0 0 18 10a8 8 0 1 0-8 8 7.96 7.96 0 0 0 4.9-1.685l5.393 5.392a1 1 0 1 0 1.414-1.414Z'
                   fill='currentColor'
                 ></path>
