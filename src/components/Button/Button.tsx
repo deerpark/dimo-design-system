@@ -3,11 +3,11 @@ import { forwardRef } from 'react'
 import cx from 'classnames'
 import { CommonProps, StyleOptionProps } from '../../interfaces'
 
-type ButtonStyleProps = Pick<Required<StyleOptionProps<{}>>, 'size' | 'variant'>
+type ButtonStyleProps = Pick<Required<StyleOptionProps<{}>>, 'size' | 'variant' | 'primary'>
 type ButtonProps = PropsWithChildren<StyleOptionProps<CommonProps>> & { badge?: boolean, type?: 'button' | 'submit' | 'reset' | undefined, title?: string }
 
 /* Buttton props에 따른 클래스 객체 리턴 */
-const getClasses = ({ size, variant }: ButtonStyleProps) => {
+const getClasses = ({ size, variant, primary }: ButtonStyleProps) => {
   /* const isSolid = variant === 'solid' */
   const isOutline = variant === 'outline'
   /* const isGhost = variant === 'ghost' */
@@ -62,13 +62,17 @@ const getClasses = ({ size, variant }: ButtonStyleProps) => {
     },
     ghost: {},
   }
-  return { ...classesBySize[size], ...classesByVariant[variant] }
+  const classesByPrimary = {
+    'bg-brand-primary dark:bg-inverse-brand-primary text-content-basic': primary,
+  }
+  return { ...classesBySize[size], ...classesByVariant[variant], ...classesByPrimary }
 }
 
 function Button({
   children,
   className,
   badge,
+  primary = false,
   size = 'base',
   variant = 'solid',
   type = 'button',
@@ -85,7 +89,7 @@ function Button({
       'focus:ring-2 dark:focus:ring-0 focus:ring-brand-primary dark:focus:ring-inverse-brand-primary focus:z-20': true,
       'disabled:text-content-disabled dark:disabled:text-inverse-content-disabled disabled:opacity-50 disabled:cursor-not-allowed': true,
     },
-    getClasses({ size, variant }),
+    getClasses({ size, variant, primary }),
     {'!text-brand-sunsetPink dark:!text-inverse-brand-sunsetPink': badge},
     className
   )
