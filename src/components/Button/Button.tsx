@@ -64,7 +64,7 @@ const getClasses = ({ size, variant, primary }: ButtonStyleProps) => {
     outline: primary ? {
       'group-[.button-group]/button:-ml-px group-[.button-group]/button:first-of-type:ml-0': true,
       'text-brand-primary text-inverse-brand-primary': true,
-      'border-brand-primary dark:border-inverse-brand-primary': true,
+      'border border-brand-primary dark:border-inverse-brand-primary': true,
       'focus:border-transparent dark:focus:border-transparent': true,
       'active:border-transparent dark:active:border-transparent': true,
     } : {
