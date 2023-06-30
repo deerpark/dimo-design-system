@@ -56,6 +56,7 @@ const getClasses = ({ size, variant, primary }: ButtonStyleProps) => {
       'focus:bg-background-primary dark:focus:bg-inverse-background-primary': true,
       'active:bg-background-primary dark:active:bg-inverse-background-primary': true,
     } : {
+      'text-content-primary dark:text-inverse-content-primary': true,
       'group-[.button-group]/button:ml-px group-[.button-group]/button:first-of-type:ml-0': true,
       'bg-background-tertiary dark:bg-inverse-background-tertiary': true,
       'focus:bg-background-primary dark:focus:bg-inverse-background-primary': true,
@@ -68,6 +69,7 @@ const getClasses = ({ size, variant, primary }: ButtonStyleProps) => {
       'focus:border-transparent dark:focus:border-transparent': true,
       'active:border-transparent dark:active:border-transparent': true,
     } : {
+      'text-content-primary dark:text-inverse-content-primary': true,
       'group-[.button-group]/button:-ml-px group-[.button-group]/button:first-of-type:ml-0': true,
       'border border-border-secondary dark:border-inverse-background-secondary': true,
       'focus:border-transparent dark:focus:border-transparent': true,
@@ -75,7 +77,8 @@ const getClasses = ({ size, variant, primary }: ButtonStyleProps) => {
     },
     ghost: primary ? {
       'text-brand-primary text-inverse-brand-primary': true,
-    } : {},
+    } : {
+      'text-content-primary dark:text-inverse-content-primary': true,},
   }
   return { ...classesBySize[size], ...classesByVariant[variant] }
 }
@@ -95,7 +98,6 @@ function Button({
     {
       'relative inline-flex items-center justify-center outline-none transition-all whitespace-nowrap shrink-0': true,
       'group-[.button-group]/button:rounded-none': true,
-      'text-content-primary dark:text-inverse-content-primary': true,
       'hover:opacity-70 dark:hover:opacity-70 hover:z-10': true,
       'active:scale-95 active:z-20': true,
       'focus:ring-2 dark:focus:ring-0 focus:ring-brand-primary dark:focus:ring-inverse-brand-primary focus:z-20': true,
