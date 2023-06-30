@@ -47,25 +47,37 @@ const getClasses = ({ size, variant, primary }: ButtonStyleProps) => {
       'shadow-sm dark:shadow-dksm': isOutline,
     },
   }
+  // 'bg-brand-primary dark:bg-inverse-brand-primary text-content-basic': primary,
   const classesByVariant = {
-    solid: {
+    solid: primary ? {
+      'group-[.button-group]/button:ml-px group-[.button-group]/button:first-of-type:ml-0': true,
+      'text-content-basic': true,
+      'bg-brand-primary dark:bg-inverse-brand-primary': true,
+      'focus:bg-background-primary dark:focus:bg-inverse-background-primary': true,
+      'active:bg-background-primary dark:active:bg-inverse-background-primary': true,
+    } : {
       'group-[.button-group]/button:ml-px group-[.button-group]/button:first-of-type:ml-0': true,
       'bg-background-tertiary dark:bg-inverse-background-tertiary': true,
       'focus:bg-background-primary dark:focus:bg-inverse-background-primary': true,
       'active:bg-background-primary dark:active:bg-inverse-background-primary': true,
     },
-    outline: {
+    outline: primary ? {
+      'group-[.button-group]/button:-ml-px group-[.button-group]/button:first-of-type:ml-0': true,
+      'text-brand-primary text-inverse-brand-primary': true,
+      'border-brand-primary dark:border-inverse-brand-primary': true,
+      'focus:border-transparent dark:focus:border-transparent': true,
+      'active:border-transparent dark:active:border-transparent': true,
+    } : {
       'group-[.button-group]/button:-ml-px group-[.button-group]/button:first-of-type:ml-0': true,
       'border border-border-secondary dark:border-inverse-background-secondary': true,
       'focus:border-transparent dark:focus:border-transparent': true,
       'active:border-transparent dark:active:border-transparent': true,
     },
-    ghost: {},
+    ghost: primary ? {
+      'text-brand-primary text-inverse-brand-primary': true,
+    } : {},
   }
-  const classesByPrimary = {
-    'bg-brand-primary dark:bg-inverse-brand-primary text-content-basic': primary,
-  }
-  return { ...classesBySize[size], ...classesByVariant[variant], ...classesByPrimary }
+  return { ...classesBySize[size], ...classesByVariant[variant] }
 }
 
 function Button({
