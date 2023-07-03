@@ -71,7 +71,7 @@ const getClasses = ({ size, variant, primary }: ButtonStyleProps) => {
     } : {
       'text-content-primary dark:text-inverse-content-primary': true,
       'group-[.button-group]/button:-ml-px group-[.button-group]/button:first-of-type:ml-0': true,
-      'border border-border-secondary dark:border-inverse-background-secondary': true,
+      'border border-border-secondary dark:border-inverse-border-primary': true,
       'focus:border-transparent dark:focus:border-transparent': true,
       'active:border-transparent dark:active:border-transparent': true,
     },
