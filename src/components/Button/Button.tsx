@@ -4,7 +4,7 @@ import cx from 'classnames'
 import { CommonProps, StyleOptionProps } from '../../interfaces'
 
 type ButtonStyleProps = Pick<Required<StyleOptionProps<{}>>, 'size' | 'variant' | 'primary'>
-type ButtonProps = PropsWithChildren<StyleOptionProps<CommonProps>> & { badge?: boolean, type?: 'button' | 'submit' | 'reset' | undefined, title?: string }
+type ButtonProps = PropsWithChildren<StyleOptionProps<CommonProps>> & { badge?: boolean } & React.DetailedHTMLProps<React.ButtonHTMLAttributes<HTMLButtonElement>, HTMLButtonElement>
 
 /* Buttton props에 따른 클래스 객체 리턴 */
 const getClasses = ({ size, variant, primary }: ButtonStyleProps) => {
@@ -53,8 +53,8 @@ const getClasses = ({ size, variant, primary }: ButtonStyleProps) => {
       'group-[.button-group]/button:ml-px group-[.button-group]/button:first-of-type:ml-0': true,
       'text-content-basic': true,
       'bg-brand-primary dark:bg-inverse-brand-primary': true,
-      'focus:bg-background-primary dark:focus:bg-inverse-background-primary': true,
-      'active:bg-background-primary dark:active:bg-inverse-background-primary': true,
+      'focus:bg-brand-primary dark:focus:bg-inverse-brand-primary': true,
+      'active:bg-brand-primary dark:active:bg-inverse-brand-primary': true,
     } : {
       'text-content-primary dark:text-inverse-content-primary': true,
       'group-[.button-group]/button:ml-px group-[.button-group]/button:first-of-type:ml-0': true,
@@ -90,8 +90,6 @@ function Button({
   primary = false,
   size = 'base',
   variant = 'solid',
-  type = 'button',
-  title = "",
   ...props
 }: ButtonProps, ref: Ref<HTMLButtonElement>) {
   const classnames = cx(
@@ -108,7 +106,7 @@ function Button({
     className
   )
   return (
-    <button ref={ref} type={type} className={classnames} title={title} {...props}>
+    <button ref={ref} className={classnames} {...props}>
       {children}
       {badge && <span className="bg-brand-sunsetPink dark:bg-inverse-brand-sunsetPink w-1 h-1 absolute top-0.5 right-0.5 rounded-full" />}
     </button>
