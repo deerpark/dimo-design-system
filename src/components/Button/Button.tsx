@@ -113,9 +113,10 @@ function Button({
   )
 }
 
-export const Group = ({ children }: PropsWithChildren<StyleOptionProps<CommonProps>>) => {
+export const Group = ({ children, className }: PropsWithChildren<StyleOptionProps<CommonProps>>) => {
   const classnames = cx({
     'inline-flex items-stretch gap-0 button-group group/button': true,
+    className,
   })
   return <div className={classnames}>{children}</div>
 }
