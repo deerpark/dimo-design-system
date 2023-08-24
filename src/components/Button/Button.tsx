@@ -98,7 +98,7 @@ function Button({
       'group-[.button-group]/button:rounded-none': true,
       'hover:opacity-70 dark:hover:opacity-70 hover:z-10': true,
       'active:scale-95 active:z-20': true,
-      'focus:ring-2 dark:focus:ring-0 focus:ring-brand-primary dark:focus:ring-inverse-brand-primary focus:z-20': true,
+      'focus:ring-2 dark:focus:ring-2 focus:ring-brand-primary dark:focus:ring-inverse-brand-primary focus:z-20': true,
       'disabled:text-content-disabled dark:disabled:text-inverse-content-disabled disabled:opacity-50 disabled:cursor-not-allowed': true,
     },
     getClasses({ size, variant, primary }),
