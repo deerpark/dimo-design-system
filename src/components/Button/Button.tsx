@@ -65,7 +65,8 @@ function ButtonComponent({
   size = 'medium',
   variant = 'solid',
   disabled,
-  type = 'button'
+  type = 'button',
+  onClick
 }: ButtonComponentProps, ref: Ref<HTMLButtonElement>) {
   const classnames = cx(
     {
@@ -79,7 +80,7 @@ function ButtonComponent({
     className,
   )
   return (
-    <Button ref={ref} className={classnames} type={type} disabled={disabled}>
+    <Button ref={ref} className={classnames} type={type} disabled={disabled} onClick={onClick}>
       {children}
       {badge && <span className="bg-brand-sunsetPink w-1 h-1 absolute top-0.5 right-0.5 rounded-full" />}
     </Button>
