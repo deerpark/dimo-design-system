@@ -1,5 +1,5 @@
 import { PropsWithChildren } from 'react'
-import cx from 'classnames'
+import { cx } from '../../lib/utils'
 import { CommonProps, StyleOptionProps } from '../../interfaces'
 
 export default function Box({

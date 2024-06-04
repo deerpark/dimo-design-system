@@ -1,4 +1,4 @@
-export type ComponentSize = 'xs' | 'sm' | 'base' | 'lg' | 'xl'
+export type ComponentSize = 'mini' | 'small' | 'medium' | 'default' | 'large'
 export type ComponentVariant = 'solid' | 'outline' | 'ghost'
 
 export type StyleOptionProps<P> = P & {

@@ -2,12 +2,246 @@
 @tailwind components;
 @tailwind utilities;
 
+
 @layer base {
+  :root {
+    --awds-color-gray-50: 210, 20%, 98%, 1;
+    --awds-color-gray-100: 220, 14%, 96%, 1;
+    --awds-color-gray-200: 220, 13%, 91%, 1;
+    --awds-color-gray-300: 61, 88%, 44%, 1;
+    --awds-color-gray-400: 218, 11%, 65%, 1;
+    --awds-color-gray-500: 220, 9%, 46%, 1;
+    --awds-color-gray-600: 215, 14%, 34%, 1;
+    --awds-color-gray-700: 217, 19%, 27%, 1;
+    --awds-color-gray-800: 215, 28%, 17%, 1;
+    --awds-color-gray-900: 221, 39%, 11%, 1;
+    --awds-color-gray-950: 224, 71%, 4%, 1;
+
+    --awds-color-content-primary: 220, 40%, 11%, 1;
+    --awds-color-content-secondary: 220, 14%, 34%, 1;
+    --awds-color-content-tertiary: 220, 11%, 65%, 1;
+    --awds-color-content-disabled: 220, 12%, 84%, 1;
+    --awds-color-content-basic: 0, 0%, 100%, 1;
+    --awds-color-content-label: 0, 0%, 100%, 1;
+
+    --awds-color-background-primary: 0, 0%, 100%, 1;
+    --awds-color-background-secondary: 220, 20%, 98%, 1;
+    --awds-color-background-tertiary: 220, 14%, 97%, 1;
+    --awds-color-background-form: 0, 0%, 100%, 1;
+
+    --awds-color-border-primary: 220, 12%, 84%, 1;
+    --awds-color-border-secondary: 220, 13%, 92%, 1;
+    --awds-color-border-tertiary: 220, 14%, 96%, 1;
+
+    --awds-color-brand-primary: 215, 100%, 50%, 1;
+    --awds-color-brand-primary-hovered: 215, 100%, 50%, .8;
+    --awds-color-brand-primary-pressed: 215, 100%, 45%, 1;
+    --awds-color-brand-primary-soft: 215, 100%, 50%, .08;
+    --awds-color-brand-primary-soft-hovered: 215, 100%, 50%, .12;
+    --awds-color-brand-primary-soft-pressed: 215, 100%, 50%, .16;
+
+    --awds-color-brand-dimo: 215, 100%, 50%, 1;
+    --awds-color-brand-dimo-hovered: 215, 100%, 50%, .8;
+    --awds-color-brand-dimo-pressed: 215, 100%, 45%, 1;
+    --awds-color-brand-dimo-soft: 215, 100%, 50%, .08;
+    --awds-color-brand-dimo-soft-hovered: 215, 100%, 50%, .12;
+    --awds-color-brand-dimo-soft-pressed: 215, 100%, 50%, .16;
+    --awds-color-brand-coni: 213, 100%, 50%, 1;
+    --awds-color-brand-coni-hovered: 213, 100%, 50%, .8;
+    --awds-color-brand-coni-pressed: 213, 100%, 45%, 1;
+    --awds-color-brand-coni-soft: 213, 100%, 50%, .08;
+    --awds-color-brand-coni-soft-hovered: 213, 100%, 50%, .12;
+    --awds-color-brand-coni-soft-pressed: 213, 100%, 50%, .16;
+    --awds-color-brand-voci: 150, 100%, 38%, 1;
+    --awds-color-brand-voci-hovered: 150, 100%, 38%, .8;
+    --awds-color-brand-voci-pressed: 150, 100%, 33%, 1;
+    --awds-color-brand-voci-soft: 150, 100%, 38%, .08;
+    --awds-color-brand-voci-soft-hovered: 150, 100%, 38%, .12;
+    --awds-color-brand-voci-soft-pressed: 150, 100%, 38%, .16;
+
+    --awds-color-data-red: 11, 87%, 60%, 1;
+    --awds-color-data-red-soft: 11, 87%, 60%, .12;
+    --awds-color-data-yellow: 40, 100%, 48%, 1;
+    --awds-color-data-yellow-soft: 40, 100%, 48%, .12;
+    --awds-color-data-green: 155, 54%, 46%, 1;
+    --awds-color-data-green-soft: 155, 54%, 46%, .12;
+    --awds-color-data-cyan: 194, 87%, 50%, 1;
+    --awds-color-data-cyan-soft: 194, 87%, 50%, .12;
+    --awds-color-data-purple: 252, 70%, 63%, 1;
+    --awds-color-data-purple-soft: 252, 70%, 63%, .12;
+    --awds-color-data-gold: 48, 95%, 52%, 1;
+    --awds-color-data-gold-soft: 48, 95%, 52%, .12;
+    --awds-color-data-pink: 337, 90%, 66%, 1;
+    --awds-color-data-pink-soft: 337, 90%, 66%, .12;
+    --awds-color-data-mint: 164, 90%, 42%, 1;
+    --awds-color-data-mint-soft: 164, 90%, 42%, .12;
+
+    --awds-color-semantic-information: 213, 100%, 55%, 1;
+    --awds-color-semantic-notice: 34, 100%, 49%, 1;
+    --awds-color-semantic-positive: 140, 95%, 40%, 1;
+    --awds-color-semantic-negative: 0, 82%, 60%, 1;
+
+    --awds-color-gsshop-leafgreen: 65, 71%, 51%, 1;
+    --awds-color-gsshop-sunsetpink: 341, 100%, 49%, 1;
+    --awds-color-gsshop-aquablue: 185, 84%, 38%, 1;
+    --awds-color-gsshop-earthbrown: 56, 21%, 29%, 1;
+
+    .dark {
+      --awds-color-content-primary: 220, 5%, 90%, 1;
+      --awds-color-content-secondary: 220, 10%, 72%, 1;
+      --awds-color-content-tertiary: 220, 8%, 58%, 1;
+      --awds-color-content-disabled: 220, 14%, 34%, 1;
+      --awds-color-content-basic: 220, 50%, 10%, 1;
+      --awds-color-content-label: 220, 5%, 90%, 1;
+
+      --awds-color-background-primary: 220, 13%, 18%, 1;
+      --awds-color-background-secondary: 220, 15%, 13%, 1;
+      --awds-color-background-tertiary: 220, 10%, 25%, 1;
+      --awds-color-background-form: 220, 10%, 25%, 1;
+
+      --awds-color-border-primary: 220, 6%, 32%, 1;
+      --awds-color-border-secondary: 220, 8%, 24%, 1;
+      --awds-color-border-tertiary: 220, 10%, 22%, 1;
+
+      --awds-color-brand-primary: 213, 90%, 65%, 1;
+      --awds-color-brand-primary-hovered: 213, 90%, 65%, .8;
+      --awds-color-brand-primary-pressed: 213, 90%, 65%, .7;
+      --awds-color-brand-primary-soft: 213, 90%, 65%, .28;
+      --awds-color-brand-primary-soft-hovered: 213, 90%, 65%, .38;
+      --awds-color-brand-primary-soft-pressed: 213, 90%, 65%, .48;
+
+      --awds-color-brand-dimo: 213, 90%, 65%, 1;
+      --awds-color-brand-dimo-hovered: 213, 90%, 65%, .8;
+      --awds-color-brand-dimo-pressed: 213, 90%, 65%, .7;
+      --awds-color-brand-dimo-soft: 213, 90%, 65%, .28;
+      --awds-color-brand-dimo-soft-hovered: 213, 90%, 65%, .38;
+      --awds-color-brand-dimo-soft-pressed: 213, 90%, 65%, .48;
+      --awds-color-brand-coni: 213, 100%, 50%, 1;
+      --awds-color-brand-coni-hovered: 213, 100%, 50%, .8;
+      --awds-color-brand-coni-pressed: 213, 100%, 45%, .7;
+      --awds-color-brand-coni-soft: 213, 100%, 50%, .28;
+      --awds-color-brand-coni-soft-hovered: 213, 100%, 50%, .38;
+      --awds-color-brand-coni-soft-pressed: 213, 100%, 50%, .48;
+      --awds-color-brand-voci: 25, 90%, 55%, 1;
+      --awds-color-brand-voci-hovered: 25, 90%, 55%, .8;
+      --awds-color-brand-voci-pressed: 25, 90%, 50%, .7;
+      --awds-color-brand-voci-soft: 25, 90%, 55%, .28;
+      --awds-color-brand-voci-soft-hovered: 25, 90%, 55%, .38;
+      --awds-color-brand-voci-soft-pressed: 25, 90%, 55%, .48;
+
+      --awds-color-data-red: 11, 78%, 63%, 1;
+      --awds-color-data-red-soft: 11, 78%, 63%, .3;
+      --awds-color-data-yellow: 11, 83%, 60%, 1;
+      --awds-color-data-yellow-soft: 11, 83%, 60%, .3;
+      --awds-color-data-green: 155, 68%, 42%, 1;
+      --awds-color-data-green-soft: 155, 68%, 42%, .3;
+      --awds-color-data-cyan: 194, 73%, 60%, 1;
+      --awds-color-data-cyan-soft: 194, 73%, 60%, .3;
+      --awds-color-data-purple: 252, 80%, 70%, 1;
+      --awds-color-data-purple-soft: 252, 80%, 70%, .3;
+      --awds-color-data-gold: 48, 90%, 56%, 1;
+      --awds-color-data-gold-soft: 48, 90%, 56%, .3;
+      --awds-color-data-pink: 337, 83%, 64%, 1;
+      --awds-color-data-pink-soft: 337, 83%, 64%, .3;
+      --awds-color-data-mint: 164, 90%, 40%, 1;
+      --awds-color-data-mint-soft: 164, 90%, 40%, .3;
+
+      --awds-color-semantic-information: 213, 97%, 55%, 1;
+      --awds-color-semantic-notice: 34, 97%, 49%, 1;
+      --awds-color-semantic-positive: 140, 90%, 40%, 1;
+      --awds-color-semantic-negative: 0, 82%, 60%, 1;
+
+      --awds-color-gsshop-leafgreen: 65, 68%, 50%, 1;
+      --awds-color-gsshop-sunsetpink: 341, 84%, 50%, 1;
+      --awds-color-gsshop-aquablue: 185, 79%, 40%, 1;
+      --awds-color-gsshop-earthbrown: 56, 28%, 30%, 1;
+    }
+
+    --awds-font-size-11: 11px;
+    --awds-font-size-12: 12px;
+    --awds-font-size-13: 13px;
+    --awds-font-size-14: 14px;
+    --awds-font-size-16: 16px;
+    --awds-font-size-18: 18px;
+    --awds-font-size-20: 20px;
+    --awds-font-size-24: 24px;
+    --awds-font-size-28: 28px;
+    --awds-font-size-32: 32px;
+
+    --awds-line-height-16: 16px;
+    --awds-line-height-18: 18px;
+    --awds-line-height-20: 20px;
+    --awds-line-height-24: 24px;
+    --awds-line-height-28: 28px;
+    --awds-line-height-32: 32px;
+    --awds-line-height-36: 36px;
+
+    --awds-font-weight-light: 300;
+    --awds-font-weight-regular: 400;
+    --awds-font-weight-medium: 500;
+    --awds-font-weight-semibold: 600;
+    --awds-font-weight-bold: 700;
+    --awds-font-weight-extra-bold: 800;
+
+    --awds-letter-spacing-0: 0;
+    --awds-letter-spacing--1: -1%;
+
+    --awds-text-decoration-underline: underline;
+
+    --awds-font-families-pretendard: pretendard;
+
+    --awds-typo-display1: 800 32px/36px pretendard;
+    --awds-typo-display2: 700 28px/32px pretendard;
+    --awds-typo-display3: 700 24px/32px pretendard;
+    --awds-typo-display4: 400 24px/32px pretendard;
+
+    --awds-typo-headline1: 700 20px/28px pretendard;
+    --awds-typo-headline2: 700 18px/24px pretendard;
+
+    --awds-typo-label1: 700 16px/24px pretendard;
+    --awds-typo-label2: 700 14px/20px pretendard;
+    --awds-typo-label3: 700 13px/20px pretendard;
+    --awds-typo-label4: 600 12px/18px pretendard;
+
+    --awds-typo-body1: 400 20px/28px pretendard;
+    --awds-typo-body2: 400 16px/24px pretendard;
+    --awds-typo-body3: 400 14px/20px pretendard;
+    --awds-typo-body4: 400 13px/20px pretendard;
+    --awds-typo-body5: 400 12px/18px pretendard;
+    --awds-typo-body6: 400 11px/16px pretendard;
+
+    --awds-spacing-0: 0;
+    --awds-spacing-2: 2;
+    --awds-spacing-4: 4;
+    --awds-spacing-6: 6;
+    --awds-spacing-8: 8;
+    --awds-spacing-10: 10;
+    --awds-spacing-12: 12;
+    --awds-spacing-16: 16;
+    --awds-spacing-18: 18;
+    --awds-spacing-20: 20;
+    --awds-spacing-24: 24;
+    --awds-spacing-28: 28;
+    --awds-spacing-32: 32;
+    --awds-spacing-36: 36;
+    --awds-spacing-40: 40;
+    --awds-spacing-48: 48;
+    --awds-spacing-56: 56;
+    --awds-spacing-64: 64;
+    --awds-spacing-72: 72;
+    --awds-spacing-80: 80;
+
+    --awds-radius-0: 0;
+    --awds-radius-4: 4;
+    --awds-radius-8: 8;
+    --awds-radius-12: 12;
+    --awds-radius-round: 1000;
+  }
   body {
-    @apply bg-background-primary dark:bg-inverse-background-primary text-content-secondary dark:text-inverse-content-secondary;
+    @apply bg-background-primary text-content-secondary;
   }
 }
-
+ 
 @layer components {
   .flex-centered {
     @apply flex flex-col items-center justify-center;

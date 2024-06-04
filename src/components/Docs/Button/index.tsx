@@ -1,4 +1,4 @@
-import { Container, Button, Box, ButtonGroup } from '../../'
+import { Container, Button, Box } from '../../'
 
 export default function ButtonPage() {
   return (
@@ -6,13 +6,27 @@ export default function ButtonPage() {
       <Container className='flex flex-col gap-y-5'>
         <div id='solid'>
           <h3 className='text-base font-bold'>Solid</h3>
-          <p className='text-xs opacity-50 font-mono'>variants="solid"</p>
+          <p className='font-mono text-xs opacity-50'>variants="solid"</p>
         </div>
-        <Box className='flex items-center mb-2 gap-x-2' padding rounded border shadow>
-          <Button size='xl'>경쟁사편성</Button>
-          <Button size='lg'>외부채널 편성</Button>
+        <Box
+          className='mb-2 flex items-center gap-x-2'
+          padding
+          rounded
+          border
+          shadow
+        >
+          <Button size='large' primary>
+            경쟁사편성
+          </Button>
+          <Button size='default'>외부채널 편성</Button>
           <Button className='gap-x-1'>
-            <svg width='20' height='20' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'>
+            <svg
+              width='20'
+              height='20'
+              viewBox='0 0 24 24'
+              fill='none'
+              xmlns='http://www.w3.org/2000/svg'
+            >
               <path
                 d='M10.641 10.168h-4.57c-.409 0-.715.311-.715.73 0 .414.306.726.714.726h1.392v4.995c0 .58.333.934.886.934.553 0 .891-.354.891-.934v-4.995h1.402c.408 0 .71-.312.71-.726 0-.419-.302-.73-.71-.73ZM16.587 10.98c.172-.623.435-.877.908-.877.51 0 .87.318.87.784 0 .178-.06.452-.14.705l-1.584 4.71c-.285.88-.715 1.252-1.483 1.252-.778 0-1.224-.377-1.504-1.252l-1.584-4.71a2.332 2.332 0 0 1-.14-.688c0-.473.366-.8.876-.8.456 0 .752.285.929.876l1.402 4.618h.08l1.37-4.619Z'
                 fill='currentColor'
@@ -41,85 +55,133 @@ export default function ButtonPage() {
               ></path>
             </svg>
           </Button>
-          <Button size='sm'>편성정보 조회</Button>
-          <Button size='xs'>초기화</Button>
+          <Button size='small'>편성정보 조회</Button>
+          <Button size='mini'>초기화</Button>
         </Box>
         <div id='outline'>
-          <h3 className='text-base font-bold top-10'>Outline</h3>
-          <p className='text-xs opacity-50 font-mono'>variants="outline"</p>
+          <h3 className='top-10 text-base font-bold'>Outline</h3>
+          <p className='font-mono text-xs opacity-50'>variants="outline"</p>
         </div>
-        <Box className='flex items-center mb-2 gap-x-2' padding rounded border shadow>
-          <Button variant='outline' size='xl'>
+        <Box
+          className='mb-2 flex items-center gap-x-2'
+          padding
+          rounded
+          border
+          shadow
+        >
+          <Button variant='outline' size='large' primary>
             프로그램 전체
           </Button>
-          <Button variant='outline' size='lg'>
+          <Button variant='outline' size='default'>
             CATV
           </Button>
           <Button variant='outline'>MC/PC</Button>
-          <Button variant='outline' size='sm' badge>
+          <Button variant='outline' size='small' badge>
             시청가구
           </Button>
-          <Button variant='outline' size='xs'>
+          <Button variant='outline' size='mini'>
             주문콜
           </Button>
         </Box>
         <div id='ghost'>
-          <h3 className='text-base font-bold top-10'>Ghost</h3>
-          <p className='text-xs opacity-50 font-mono'>variants="ghost"</p>
+          <h3 className='top-10 text-base font-bold'>Ghost</h3>
+          <p className='font-mono text-xs opacity-50'>variants="ghost"</p>
         </div>
-        <Box className='flex items-center mb-2 gap-x-2' padding rounded border shadow>
-          <Button variant='ghost' size='xl'>
+        <Box
+          className='mb-2 flex items-center gap-x-2'
+          padding
+          rounded
+          border
+          shadow
+        >
+          <Button variant='ghost' size='large' primary>
             순주문
           </Button>
-          <Button variant='ghost' size='lg'>
+          <Button variant='ghost' size='default'>
             작성/수정
           </Button>
           <Button variant='ghost'>프로그램 선택하기</Button>
-          <Button variant='ghost' size='sm'>
+          <Button variant='ghost' size='small'>
             검색
           </Button>
-          <Button variant='ghost' size='xs'>
+          <Button variant='ghost' size='mini'>
             SR
           </Button>
         </Box>
         <div id='group-solid'>
-          <h3 className='text-base font-bold top-10'>Group + Solid</h3>
-          <p className='text-xs opacity-50 font-mono'>variants="solid"</p>
+          <h3 className='top-10 text-base font-bold'>Solid</h3>
+          <p className='font-mono text-xs opacity-50'>variants="solid"</p>
         </div>
-        <Box className='flex items-center mb-2 gap-x-2' padding rounded border shadow>
-          <ButtonGroup>
-            <Button>상품평</Button>
-            <Button>내 방송 기준(한달)</Button>
-          </ButtonGroup>
+        <Box
+          className='mb-2 flex items-center gap-x-2'
+          padding
+          rounded
+          border
+          shadow
+        >
+          <Button primary>상품평</Button>
+          <Button>내 방송 기준(한달)</Button>
         </Box>
         <div id='group-outline'>
-          <h3 className='text-base font-bold top-10'>Group + Outline</h3>
-          <p className='text-xs opacity-50 font-mono'>variants="outline"</p>
+          <h3 className='top-10 text-base font-bold'>Outline</h3>
+          <p className='font-mono text-xs opacity-50'>variants="outline"</p>
         </div>
-        <Box className='flex items-center mb-2 gap-x-2' padding rounded border shadow>
-          <ButtonGroup>
-            <Button variant='outline'>닫기</Button>
-            <Button variant='outline'>확인</Button>
-            <Button variant='outline'>테스트</Button>
-          </ButtonGroup>
+        <Box
+          className='mb-2 flex items-center gap-x-2'
+          padding
+          rounded
+          border
+          shadow
+        >
+          <Button variant='outline' primary>
+            닫기
+          </Button>
+          <Button variant='outline'>확인</Button>
+          <Button variant='outline'>테스트</Button>
         </Box>
         <div id='ghost-icon-only'>
-          <h3 className='text-base font-bold top-10'>Ghost + Icon only</h3>
-          <p className='text-xs opacity-50 font-mono'>variants="ghost"</p>
+          <h3 className='top-10 text-base font-bold'>Ghost + Icon only</h3>
+          <p className='font-mono text-xs opacity-50'>variants="ghost"</p>
         </div>
-        <Box className='flex items-center mb-2 gap-x-2' padding rounded border shadow>
-          <ButtonGroup>
-            <Button variant='ghost'>
-              <svg width='16' height='16' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'>
-                <path
-                  fillRule='evenodd'
-                  clipRule='evenodd'
-                  d='M3.5 10c0-3.584 2.916-6.5 6.5-6.5s6.5 2.916 6.5 6.5-2.916 6.5-6.5 6.5A6.508 6.508 0 0 1 3.5 10Zm18.207 10.293L16.315 14.9A7.957 7.957 0 0 0 18 10a8 8 0 1 0-8 8 7.96 7.96 0 0 0 4.9-1.685l5.393 5.392a1 1 0 1 0 1.414-1.414Z'
-                  fill='currentColor'
-                ></path>
-              </svg>
-            </Button>
-          </ButtonGroup>
+        <Box
+          className='mb-2 flex items-center gap-x-2'
+          padding
+          rounded
+          border
+          shadow
+        >
+          <Button variant='ghost' primary>
+            <svg
+              width='16'
+              height='16'
+              viewBox='0 0 24 24'
+              fill='none'
+              xmlns='http://www.w3.org/2000/svg'
+            >
+              <path
+                fillRule='evenodd'
+                clipRule='evenodd'
+                d='M3.5 10c0-3.584 2.916-6.5 6.5-6.5s6.5 2.916 6.5 6.5-2.916 6.5-6.5 6.5A6.508 6.508 0 0 1 3.5 10Zm18.207 10.293L16.315 14.9A7.957 7.957 0 0 0 18 10a8 8 0 1 0-8 8 7.96 7.96 0 0 0 4.9-1.685l5.393 5.392a1 1 0 1 0 1.414-1.414Z'
+                fill='currentColor'
+              ></path>
+            </svg>
+          </Button>
+          <Button variant='ghost'>
+            <svg
+              width='16'
+              height='16'
+              viewBox='0 0 24 24'
+              fill='none'
+              xmlns='http://www.w3.org/2000/svg'
+            >
+              <path
+                fillRule='evenodd'
+                clipRule='evenodd'
+                d='M3.5 10c0-3.584 2.916-6.5 6.5-6.5s6.5 2.916 6.5 6.5-2.916 6.5-6.5 6.5A6.508 6.508 0 0 1 3.5 10Zm18.207 10.293L16.315 14.9A7.957 7.957 0 0 0 18 10a8 8 0 1 0-8 8 7.96 7.96 0 0 0 4.9-1.685l5.393 5.392a1 1 0 1 0 1.414-1.414Z'
+                fill='currentColor'
+              ></path>
+            </svg>
+          </Button>
         </Box>
       </Container>
     </Container.Root>

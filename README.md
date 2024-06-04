@@ -20,18 +20,18 @@ npm install dimo-design-system --save
 Here is a quick example to get you started, **it's all you need**:
 
 ```jsx
-import { Button, ButtonGroup } from 'dimo-design-system'
+import { Button } from 'dimo-design-system'
 
 function App() {
   return (
-    <ButtonGroup>
+    <>
       <Button size="small">
         Hello World
       </Button>
       <Button size="small">
         Hello World
       </Button>
-    </ButtonGroup>
+    </>
   );
 }
 

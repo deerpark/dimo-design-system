@@ -1,6 +1,6 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import cx from 'classnames'
 import { Link, Outlet, useParams } from 'react-router-dom'
+import { cx } from '../../lib/utils'
 import { DimoNavigationState, NavigationPage, useDimoNav } from '../../router.config'
 export default function Root() {
   const params = useParams() as DimoNavigationState

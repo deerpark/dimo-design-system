@@ -1,8 +1,12 @@
 import { PropsWithChildren } from 'react'
-import cx from 'classnames'
+import { cx } from '../../lib/utils'
 import { CommonProps } from '../../interfaces'
 
-export default function Container({ children, className, ...props }: PropsWithChildren<CommonProps>) {
+export default function Container({
+  children,
+  className,
+  ...props
+}: PropsWithChildren<CommonProps>) {
   const classNames = cx(
     {
       'mx-auto': true,
@@ -17,7 +21,11 @@ export default function Container({ children, className, ...props }: PropsWithCh
   )
 }
 
-Container.Root = ({ children, className, ...props }: PropsWithChildren<CommonProps>) => {
+Container.Root = ({
+  children,
+  className,
+  ...props
+}: PropsWithChildren<CommonProps>) => {
   const classNames = cx(
     {
       'flex-1': true,

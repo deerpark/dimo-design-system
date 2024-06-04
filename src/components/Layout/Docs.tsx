@@ -1,10 +1,10 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import cx from 'classnames'
 import { useEffect } from 'react'
 import { Outlet, useLocation, useParams } from 'react-router-dom'
 import { Disclosure } from '@headlessui/react'
 import { ChevronRightIcon } from '@heroicons/react/20/solid'
 import { DimoNavigationState, useDimoNav } from '../../router.config'
+import { cx } from '../../lib/utils'
 import ButtonPage from '../Docs/Button'
 import NavigationPage from '../Docs/Navigation'
 

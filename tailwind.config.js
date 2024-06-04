@@ -10,35 +10,8 @@ module.exports = {
       screens: {
         '3xl': '1860px',
       },
-      animation: {
-        'slide-in-bottom': 'slide-in-bottom 0.3s cubic-bezier(0.230, 1.000, 0.320, 1.000) both',
-        'slide-in-bottom-2': 'slide-in-bottom 0.3s cubic-bezier(0.230, 1.000, 0.320, 1.000) 0.05s both',
-        'slide-in-bottom-3': 'slide-in-bottom 0.3s cubic-bezier(0.230, 1.000, 0.320, 1.000) 0.08s both',
-        'slide-in-bottom-4': 'slide-in-bottom 0.3s cubic-bezier(0.230, 1.000, 0.320, 1.000) 0.09s both',
-        'slide-in-bottom-5': 'slide-in-bottom 0.3s cubic-bezier(0.230, 1.000, 0.320, 1.000) 0.095s both',
-      },
       fontFamily: {
-        sans: [
-          'Pretendard Variable',
-          'Pretendard',
-          '-apple-system',
-          'BlinkMacSystemFont',
-          'system-ui',
-          'Roboto',
-          'Helvetica Neue',
-          'Segoe UI',
-          'Apple SD Gothic Neo',
-          'Noto Sans KR',
-          'Malgun Gothic',
-          'Apple Color Emoji',
-          'Segoe UI Emoji',
-          'Segoe UI Symbol',
-          'sans-serif',
-        ],
-      },
-      maxWidth: {
-        mobile: 'calc(100vw - 48px)',
-        pc: 'calc(100vw - 104px)',
+        sans: ['Pretendard Variable', 'Pretendard', 'sans-serif'],
       },
       margin: {
         1.5: '1.5px',
@@ -46,144 +19,138 @@ module.exports = {
       outlineWidth: {
         3: '3px',
       },
-      boxShadow: {
-        xs: '0 1px 1.5px 0 rgba(19, 23, 27, 0.01)',
-        dkxs: '0 1px 3px -1px rgba(0, 0, 0, 0.2)',
-        sm: '0 1px 0px -1px rgba(19, 23, 27,  0.3), 0 1px 3px -1px rgba(19, 23, 27,  0.05)',
-        dksm: '0 1px 3px -1px rgba(0, 0, 0,  0.3)',
-        DEFAULT: '0 1px 1px -1px rgba(19, 23, 27,  0.3), 0 1px 5px -1px rgba(19, 23, 27,  0.1)',
-        dk: '0 1px 3px -1px rgba(0, 0, 0,  0.3)',
-        md: '0 2px 1px -1px rgba(19, 23, 27,  0.07), 0 2px 6px -1px rgba(19, 23, 27,  0.2)',
-        dkmd: '0 1px 3px -1px rgba(0, 0, 0,  0.5)',
-        lg: '0px 10px 15px -3px rgba(0, 0, 0, 0.1), 0px 4px 6px -2px rgba(0, 0, 0, 0.05), 0px 0px 0px 1px rgba(0, 0, 0, 0.05)',
-        dklg: '0 4px 20px -1px rgba(0, 0, 0,  0.5)',
-        '2xl': '0 8px 40px -1px rgba(0, 0, 0,  0.07)',
-        dk2xl: '0 8px 40px -1px rgba(0, 0, 0,  0.5)',
-        mini: '0 3px 16px -1px rgba(0, 0, 0,  0.05)',
-        dkmini: '0 3px 16px -1px rgba(0, 0, 0,  0.3)',
-        tooltip: '0 4px 20px -1px rgba(0, 0, 0,  0.07)',
-        dktooltip: '0 4px 20px -1px rgba(0, 0, 0,  0.5)',
-      },
-      dropShadow: {
-        'overlay-text': '0 0 6px rgba(249, 250, 251, 1)',
-        'dkoverlay-text': '0 0 6px rgba(9, 14, 30, 1)',
-      },
       fontSize: {
-        '3xs': '0.625rem',
-        '2xs': '0.688rem',
-        xs: [
-          /* body xsmall */ '0.75rem' /* 12px */,
+        display1: [
+          'var(--awds-font-size-32)',
           {
-            lineHeight: '1.5',
-            letterSpacing: '-0.025rem',
-            fontWeight: '400',
+            lineHeight: 'var(--awds-line-height-36)',
+            letterSpacing: 'var(--awds-letter-spacing--1)',
+            fontWeight: 'var(--awds-font-weight-extra-bold)',
           },
         ],
-        sm: [
-          /* body small */ '0.8125rem' /* 13px */,
+        display2: [
+          'var(--awds-font-size-28)',
           {
-            lineHeight: '1.5',
-            letterSpacing: '-0.025rem',
-            fontWeight: '400',
+            lineHeight: 'var(--awds-line-height-32)',
+            letterSpacing: 'var(--awds-letter-spacing--1)',
+            fontWeight: 'var(--awds-font-weight-bold)',
           },
         ],
-        base: [
-          /* body medium */ '0.875rem' /* 14px */,
+        display3: [
+          'var(--awds-font-size-24)',
           {
-            lineHeight: '1.5',
-            letterSpacing: '-0.025rem',
-            fontWeight: '400',
+            lineHeight: 'var(--awds-line-height-32)',
+            letterSpacing: 'var(--awds-letter-spacing--1)',
+            fontWeight: 'var(--awds-font-weight-bold)',
           },
         ],
-        md: [
-          /* body large */ '1rem' /* 16px */,
+        display4: [
+          'var(--awds-font-size-24)',
           {
-            lineHeight: '1.5',
-            letterSpacing: '-0.025rem',
-            fontWeight: '400',
+            lineHeight: 'var(--awds-line-height-32)',
+            letterSpacing: 'var(--awds-letter-spacing--1)',
+            fontWeight: 'var(--awds-font-weight-regular)',
           },
         ],
-        lg: [
-          /* small title */ '1.125rem' /* 18px */,
+        headline1: [
+          'var(--awds-font-size-20)',
           {
-            lineHeight: '1.25',
-            letterSpacing: '-0.025rem',
-            fontWeight: '700',
+            lineHeight: 'var(--awds-line-height-28)',
+            letterSpacing: 'var(--awds-letter-spacing--1)',
+            fontWeight: 'var(--awds-font-weight-bold)',
           },
         ],
-        '2lg': [
-          /* sub title */ '1.25rem' /* 20px */,
+        headline2: [
+          'var(--awds-font-size-18)',
           {
-            lineHeight: '1.25',
-            letterSpacing: '-0.0125rem',
-            fontWeight: '700',
+            lineHeight: 'var(--awds-line-height-24)',
+            letterSpacing: 'var(--awds-letter-spacing--1)',
+            fontWeight: 'var(--awds-font-weight-bold)',
           },
         ],
-        '3lg': [
-          /* title */ '1.375rem' /* 22px */,
+        label1: [
+          'var(--awds-font-size-16)',
           {
-            lineHeight: '1.25',
-            letterSpacing: '-0.03125rem',
-            fontWeight: '700',
+            lineHeight: 'var(--awds-line-height-24)',
+            letterSpacing: 'var(--awds-letter-spacing--1)',
+            fontWeight: 'var(--awds-font-weight-bold)',
           },
         ],
-        xl: [
-          /* h6 */ '1.625rem' /* 26px */,
+        label2: [
+          'var(--awds-font-size-14)',
           {
-            lineHeight: '1.25',
-            letterSpacing: '-0.03125rem',
-            fontWeight: '700',
+            lineHeight: 'var(--awds-line-height-20)',
+            letterSpacing: 'var(--awds-letter-spacing--1)',
+            fontWeight: 'var(--awds-font-weight-bold)',
           },
         ],
-        '2xl': [
-          /* h5 */ '1.875rem' /* 30px */,
+        label3: [
+          'var(--awds-font-size-13)',
           {
-            lineHeight: '1.25',
-            letterSpacing: '-0.03125rem',
-            fontWeight: '700',
+            lineHeight: 'var(--awds-line-height-20)',
+            letterSpacing: 'var(--awds-letter-spacing--1)',
+            fontWeight: 'var(--awds-font-weight-bold)',
           },
         ],
-        '3xl': [
-          /* h4 */ '2.125rem' /* 34px */,
+        label4: [
+          'var(--awds-font-size-12)',
           {
-            lineHeight: '1.25',
-            letterSpacing: '-0.03125rem',
-            fontWeight: '700',
+            lineHeight: 'var(--awds-line-height-18)',
+            letterSpacing: 'var(--awds-letter-spacing--1)',
+            fontWeight: 'var(--awds-font-weight-semibold)',
           },
         ],
-        '4xl': [
-          /* h3 */ '2.375rem' /* 38px */,
+        body1: [
+          'var(--awds-font-size-20)',
           {
-            lineHeight: '1.25',
-            letterSpacing: '-0.03125rem',
-            fontWeight: '600',
+            lineHeight: 'var(--awds-line-height-28)',
+            letterSpacing: 'var(--awds-letter-spacing--1)',
+            fontWeight: 'var(--awds-font-weight-regular)',
           },
         ],
-        '5xl': [
-          /* h2 */ '2.75rem' /* 44px */,
+        body2: [
+          'var(--awds-font-size-16)',
           {
-            lineHeight: '1.25',
-            letterSpacing: '-0.03125rem',
-            fontWeight: '600',
+            lineHeight: 'var(--awds-line-height-24)',
+            letterSpacing: 'var(--awds-letter-spacing--1)',
+            fontWeight: 'var(--awds-font-weight-regular)',
           },
         ],
-        '6xl': [
-          /* h1 */ '3.5rem' /* 56px */,
+        body3: [
+          'var(--awds-font-size-14)',
           {
-            lineHeight: '1.25',
-            letterSpacing: '-0.03125rem',
-            fontWeight: '600',
+            lineHeight: 'var(--awds-line-height-20)',
+            letterSpacing: 'var(--awds-letter-spacing--1)',
+            fontWeight: 'var(--awds-font-weight-regular)',
+          },
+        ],
+        body4: [
+          'var(--awds-font-size-13)',
+          {
+            lineHeight: 'var(--awds-line-height-20)',
+            letterSpacing: 'var(--awds-letter-spacing--1)',
+            fontWeight: 'var(--awds-font-weight-regular)',
+          },
+        ],
+        body5: [
+          'var(--awds-font-size-12)',
+          {
+            lineHeight: 'var(--awds-line-height-18)',
+            letterSpacing: 'var(--awds-letter-spacing--1)',
+            fontWeight: 'var(--awds-font-weight-regular)',
+          },
+        ],
+        body6: [
+          'var(--awds-font-size-11)',
+          {
+            lineHeight: 'var(--awds-line-height-16)',
+            letterSpacing: 'var(--awds-letter-spacing-0)',
+            fontWeight: 'var(--awds-font-weight-regular)',
           },
         ],
       },
       borderWidth: {
         1: '1.5px',
-      },
-      borderRadius: {
-        '2xs': '0.125rem' /* 2px */,
-        xs: '0.1875rem' /* 3px */,
-        sm: '0.25rem' /* 4px */,
-        DEFAULT: '0.3125rem' /* 5px */,
       },
       colors,
     },

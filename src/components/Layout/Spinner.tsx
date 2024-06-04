@@ -1,10 +1,12 @@
-import cx from 'classnames'
+import { cx } from '../../lib/utils'
 
 /**
  * 페이지 로딩 인디케이터 컨테이너
  */
 type SpinnerProps = { isFull?: boolean }
-export function Spinner({ isFull }: React.HTMLProps<HTMLDivElement> & SpinnerProps) {
+export function Spinner({
+  isFull,
+}: React.HTMLProps<HTMLDivElement> & SpinnerProps) {
   const className = cx({
     main: isFull,
     grow: !isFull,
