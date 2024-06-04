@@ -64,9 +64,8 @@ function ButtonComponent({
   primary = false,
   size = 'medium',
   variant = 'solid',
-  disabled,
   type = 'button',
-  onClick
+  ...props
 }: ButtonComponentProps, ref: Ref<HTMLButtonElement>) {
   const classnames = cx(
     {
@@ -79,8 +78,9 @@ function ButtonComponent({
     {'text-brand-sunsetPink': badge},
     className,
   )
+  const restProps = {...props} as Omit<React.DetailedHTMLProps<React.ButtonHTMLAttributes<HTMLButtonElement>, HTMLButtonElement>, 'ref'>
   return (
-    <Button ref={ref} className={classnames} type={type} disabled={disabled} onClick={onClick}>
+    <Button ref={ref} className={classnames} type={type} {...restProps}>
       {children}
       {badge && <span className="bg-brand-sunsetPink w-1 h-1 absolute top-0.5 right-0.5 rounded-full" />}
     </Button>
