@@ -25,17 +25,13 @@ import { Button } from 'dimo-design-system'
 function App() {
   return (
     <>
-      <Button size="small">
-        Hello World
-      </Button>
-      <Button size="small">
-        Hello World
-      </Button>
+      <Button size='small'>Hello World</Button>
+      <Button size='small'>Hello World</Button>
     </>
-  );
+  )
 }
 
-ReactDOM.render(<App />, document.querySelector('#app'));
+ReactDOM.render(<App />, document.querySelector('#app'))
 ```
 
 ## Changelog

@@ -21,7 +21,7 @@ export default function Main() {
   return (
     <Container.Root>
       <Container>
-        <div className='flex justify-center '>
+        <div className='flex justify-center'>
           <Button onClick={openModal}>Open dialog</Button>
         </div>
 
@@ -40,7 +40,7 @@ export default function Main() {
             </Transition.Child>
 
             <div className='fixed inset-0 overflow-y-auto'>
-              <div className='flex items-center justify-center min-h-full p-4 text-center'>
+              <div className='flex min-h-full items-center justify-center p-4 text-center'>
                 <Transition.Child
                   as={Fragment}
                   enter='ease-out duration-300'
@@ -50,15 +50,20 @@ export default function Main() {
                   leaveFrom='opacity-100 scale-100'
                   leaveTo='opacity-0 scale-95'
                 >
-                  <Dialog.Panel className='w-full max-w-md p-6 overflow-hidden text-left align-middle transition-all transform bg-white shadow-xl rounded-2xl'>
-                    <Dialog.Title as='h3' className='text-lg font-medium leading-6 text-gray-900'>
+                  <Dialog.Panel className='w-full max-w-md transform overflow-hidden rounded-2xl bg-white p-6 text-left align-middle shadow-xl transition-all'>
+                    <Dialog.Title
+                      as='h3'
+                      className='text-lg font-medium leading-6 text-gray-900'
+                    >
                       DIMO Design System
                     </Dialog.Title>
                     <div className='mt-2'>
-                      <p className='text-sm text-gray-500'>DDS 로 이동 하시겠습니까?</p>
+                      <p className='text-sm text-gray-500'>
+                        DDS 로 이동 하시겠습니까?
+                      </p>
                     </div>
 
-                    <div className='flex justify-end mt-4 gap-x-2'>
+                    <div className='mt-4 flex justify-end gap-x-2'>
                       <Button onClick={handleOk}>네!</Button>
                       <Button onClick={closeModal}>아니오!</Button>
                     </div>

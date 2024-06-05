@@ -1,4 +1,7 @@
-import { createBrowserRouter, /* Navigate,  */ DataRouteObject } from 'react-router-dom'
+import {
+  createBrowserRouter,
+  /* Navigate,  */ DataRouteObject,
+} from 'react-router-dom'
 import { RootLayout, Error, Layout } from './components/Layout'
 import Main from './components/Main'
 import { useState, useMemo } from 'react'
@@ -23,22 +26,32 @@ export const navigation = {
           ],
         },
         { name: 'text', href: '/design-system/components/forms/text' },
-        { name: 'select-box', href: '/design-system/components/forms/select-box' },
+        {
+          name: 'select-box',
+          href: '/design-system/components/forms/select-box',
+        },
       ],
     },
-    { name: 'lists', href: '/design-system/components/lists', },
+    { name: 'lists', href: '/design-system/components/lists' },
     { name: 'data-display', href: '/design-system/components/data-display' },
     { name: 'headings', href: '/design-system/components/headings' },
-    { name: 'application-shells', href: '/design-system/components/application-shells' },
+    {
+      name: 'application-shells',
+      href: '/design-system/components/application-shells',
+    },
     { name: 'feedback', href: '/design-system/components/feedback' },
-    { name: 'navigation',
+    {
+      name: 'navigation',
       href: '/design-system/components/navigation',
       children: [
         {
           name: 'navbars',
           href: '/design-system/components/navigation/navbars',
         },
-        { name: 'pagination', href: '/design-system/components/navigation/pagination' },
+        {
+          name: 'pagination',
+          href: '/design-system/components/navigation/pagination',
+        },
         { name: 'tabs', href: '/design-system/components/navigation/tabs' },
       ],
     },
@@ -114,27 +127,35 @@ export const routes: DataRouteObject[] = [
 export const router = createBrowserRouter(routes)
 
 type NavigationType = typeof navigation
-type NavigationPageObj = (NavigationType)[keyof NavigationType][number]
+type NavigationPageObj = NavigationType[keyof NavigationType][number]
 export type NavigationPage = keyof NavigationType
 type NavigationComponent = NavigationPageObj['name']
-type NavigationComponentObj = Extract<NavigationPageObj, {children: any}>['children'][number]
+type NavigationComponentObj = Extract<
+  NavigationPageObj,
+  { children: any }
+>['children'][number]
 type NavigationSection = NavigationComponentObj['name']
-type NavigationSectionObject = Extract<NavigationComponentObj, {children: any}>['children'][number]
+type NavigationSectionObject = Extract<
+  NavigationComponentObj,
+  { children: any }
+>['children'][number]
 type NavigationContentsHash = NavigationSectionObject['name']
 
 export type DimoNavigationState = {
-  page: NavigationPage,
-  component?: NavigationComponent,
-  section?: NavigationSection,
-  hash?: NavigationContentsHash,
+  page: NavigationPage
+  component?: NavigationComponent
+  section?: NavigationSection
+  hash?: NavigationContentsHash
 }
 
-export function useDimoNav(params: DimoNavigationState = {
-    page : 'components',
-  }) {
-  const [ dimoNav, setDimoNav ] = useState<DimoNavigationState>(params)
+export function useDimoNav(
+  params: DimoNavigationState = {
+    page: 'components',
+  }
+) {
+  const [dimoNav, setDimoNav] = useState<DimoNavigationState>(params)
 
-  const {page, component, section, hash} = dimoNav
+  const { page, component, section, hash } = dimoNav
 
   /**
    * 컴포넌트 객체 목록 ex) [{forms},{lists}],
@@ -158,8 +179,8 @@ export function useDimoNav(params: DimoNavigationState = {
    * 컨텐츠 해시 객체 목록 ex) [{solid},{outline}],
    */
   const hashs = useMemo(() => {
-      const parent = sections && sections.find(c => c.name === section)
-      return parent && 'children' in parent ? parent.children : undefined
+    const parent = sections && sections.find(c => c.name === section)
+    return parent && 'children' in parent ? parent.children : undefined
   }, [sections, section])
 
   /**
@@ -170,9 +191,9 @@ export function useDimoNav(params: DimoNavigationState = {
       page: navigation[page],
       component: components && components.find(c => c.name === component),
       section: sections && sections.find(s => s.name === section),
-      hash: hashs && hashs.find(h => h.name === hash)
+      hash: hashs && hashs.find(h => h.name === hash),
     }
   }, [components, sections, hashs, page, component, section, hash])
 
-  return {...dimoNav, pages, components, sections, hashs, current, setDimoNav}
+  return { ...dimoNav, pages, components, sections, hashs, current, setDimoNav }
 }

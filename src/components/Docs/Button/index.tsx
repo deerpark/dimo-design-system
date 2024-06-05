@@ -1,6 +1,11 @@
+import * as React from 'react'
 import { Container, Button, Box } from '../../'
 
 export default function ButtonPage() {
+  const [a, setA] = React.useState(false)
+  const handleClick = React.useCallback(() => {
+    setA(!a)
+  }, [a])
   return (
     <Container.Root>
       <Container className='flex flex-col gap-y-5'>
@@ -15,7 +20,7 @@ export default function ButtonPage() {
           border
           shadow
         >
-          <Button size='large' primary>
+          <Button size='large' primary={a}>
             경쟁사편성
           </Button>
           <Button size='default'>외부채널 편성</Button>
@@ -69,7 +74,12 @@ export default function ButtonPage() {
           border
           shadow
         >
-          <Button variant='outline' size='large' primary>
+          <Button
+            variant='outline'
+            size='large'
+            primary={a}
+            onClick={handleClick}
+          >
             프로그램 전체
           </Button>
           <Button variant='outline' size='default'>

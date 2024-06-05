@@ -2,7 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-
 @layer base {
   :root {
     --awds-color-gray-50: 210, 20%, 98%, 1;
@@ -34,47 +33,47 @@
     --awds-color-border-tertiary: 220, 14%, 96%, 1;
 
     --awds-color-brand-primary: 215, 100%, 50%, 1;
-    --awds-color-brand-primary-hovered: 215, 100%, 50%, .8;
+    --awds-color-brand-primary-hovered: 215, 100%, 50%, 0.8;
     --awds-color-brand-primary-pressed: 215, 100%, 45%, 1;
-    --awds-color-brand-primary-soft: 215, 100%, 50%, .08;
-    --awds-color-brand-primary-soft-hovered: 215, 100%, 50%, .12;
-    --awds-color-brand-primary-soft-pressed: 215, 100%, 50%, .16;
+    --awds-color-brand-primary-soft: 215, 100%, 50%, 0.08;
+    --awds-color-brand-primary-soft-hovered: 215, 100%, 50%, 0.12;
+    --awds-color-brand-primary-soft-pressed: 215, 100%, 50%, 0.16;
 
     --awds-color-brand-dimo: 215, 100%, 50%, 1;
-    --awds-color-brand-dimo-hovered: 215, 100%, 50%, .8;
+    --awds-color-brand-dimo-hovered: 215, 100%, 50%, 0.8;
     --awds-color-brand-dimo-pressed: 215, 100%, 45%, 1;
-    --awds-color-brand-dimo-soft: 215, 100%, 50%, .08;
-    --awds-color-brand-dimo-soft-hovered: 215, 100%, 50%, .12;
-    --awds-color-brand-dimo-soft-pressed: 215, 100%, 50%, .16;
+    --awds-color-brand-dimo-soft: 215, 100%, 50%, 0.08;
+    --awds-color-brand-dimo-soft-hovered: 215, 100%, 50%, 0.12;
+    --awds-color-brand-dimo-soft-pressed: 215, 100%, 50%, 0.16;
     --awds-color-brand-coni: 213, 100%, 50%, 1;
-    --awds-color-brand-coni-hovered: 213, 100%, 50%, .8;
+    --awds-color-brand-coni-hovered: 213, 100%, 50%, 0.8;
     --awds-color-brand-coni-pressed: 213, 100%, 45%, 1;
-    --awds-color-brand-coni-soft: 213, 100%, 50%, .08;
-    --awds-color-brand-coni-soft-hovered: 213, 100%, 50%, .12;
-    --awds-color-brand-coni-soft-pressed: 213, 100%, 50%, .16;
+    --awds-color-brand-coni-soft: 213, 100%, 50%, 0.08;
+    --awds-color-brand-coni-soft-hovered: 213, 100%, 50%, 0.12;
+    --awds-color-brand-coni-soft-pressed: 213, 100%, 50%, 0.16;
     --awds-color-brand-voci: 150, 100%, 38%, 1;
-    --awds-color-brand-voci-hovered: 150, 100%, 38%, .8;
+    --awds-color-brand-voci-hovered: 150, 100%, 38%, 0.8;
     --awds-color-brand-voci-pressed: 150, 100%, 33%, 1;
-    --awds-color-brand-voci-soft: 150, 100%, 38%, .08;
-    --awds-color-brand-voci-soft-hovered: 150, 100%, 38%, .12;
-    --awds-color-brand-voci-soft-pressed: 150, 100%, 38%, .16;
+    --awds-color-brand-voci-soft: 150, 100%, 38%, 0.08;
+    --awds-color-brand-voci-soft-hovered: 150, 100%, 38%, 0.12;
+    --awds-color-brand-voci-soft-pressed: 150, 100%, 38%, 0.16;
 
     --awds-color-data-red: 11, 87%, 60%, 1;
-    --awds-color-data-red-soft: 11, 87%, 60%, .12;
+    --awds-color-data-red-soft: 11, 87%, 60%, 0.12;
     --awds-color-data-yellow: 40, 100%, 48%, 1;
-    --awds-color-data-yellow-soft: 40, 100%, 48%, .12;
+    --awds-color-data-yellow-soft: 40, 100%, 48%, 0.12;
     --awds-color-data-green: 155, 54%, 46%, 1;
-    --awds-color-data-green-soft: 155, 54%, 46%, .12;
+    --awds-color-data-green-soft: 155, 54%, 46%, 0.12;
     --awds-color-data-cyan: 194, 87%, 50%, 1;
-    --awds-color-data-cyan-soft: 194, 87%, 50%, .12;
+    --awds-color-data-cyan-soft: 194, 87%, 50%, 0.12;
     --awds-color-data-purple: 252, 70%, 63%, 1;
-    --awds-color-data-purple-soft: 252, 70%, 63%, .12;
+    --awds-color-data-purple-soft: 252, 70%, 63%, 0.12;
     --awds-color-data-gold: 48, 95%, 52%, 1;
-    --awds-color-data-gold-soft: 48, 95%, 52%, .12;
+    --awds-color-data-gold-soft: 48, 95%, 52%, 0.12;
     --awds-color-data-pink: 337, 90%, 66%, 1;
-    --awds-color-data-pink-soft: 337, 90%, 66%, .12;
+    --awds-color-data-pink-soft: 337, 90%, 66%, 0.12;
     --awds-color-data-mint: 164, 90%, 42%, 1;
-    --awds-color-data-mint-soft: 164, 90%, 42%, .12;
+    --awds-color-data-mint-soft: 164, 90%, 42%, 0.12;
 
     --awds-color-semantic-information: 213, 100%, 55%, 1;
     --awds-color-semantic-notice: 34, 100%, 49%, 1;
@@ -104,47 +103,47 @@
       --awds-color-border-tertiary: 220, 10%, 22%, 1;
 
       --awds-color-brand-primary: 213, 90%, 65%, 1;
-      --awds-color-brand-primary-hovered: 213, 90%, 65%, .8;
-      --awds-color-brand-primary-pressed: 213, 90%, 65%, .7;
-      --awds-color-brand-primary-soft: 213, 90%, 65%, .28;
-      --awds-color-brand-primary-soft-hovered: 213, 90%, 65%, .38;
-      --awds-color-brand-primary-soft-pressed: 213, 90%, 65%, .48;
+      --awds-color-brand-primary-hovered: 213, 90%, 65%, 0.8;
+      --awds-color-brand-primary-pressed: 213, 90%, 65%, 0.7;
+      --awds-color-brand-primary-soft: 213, 90%, 65%, 0.28;
+      --awds-color-brand-primary-soft-hovered: 213, 90%, 65%, 0.38;
+      --awds-color-brand-primary-soft-pressed: 213, 90%, 65%, 0.48;
 
       --awds-color-brand-dimo: 213, 90%, 65%, 1;
-      --awds-color-brand-dimo-hovered: 213, 90%, 65%, .8;
-      --awds-color-brand-dimo-pressed: 213, 90%, 65%, .7;
-      --awds-color-brand-dimo-soft: 213, 90%, 65%, .28;
-      --awds-color-brand-dimo-soft-hovered: 213, 90%, 65%, .38;
-      --awds-color-brand-dimo-soft-pressed: 213, 90%, 65%, .48;
+      --awds-color-brand-dimo-hovered: 213, 90%, 65%, 0.8;
+      --awds-color-brand-dimo-pressed: 213, 90%, 65%, 0.7;
+      --awds-color-brand-dimo-soft: 213, 90%, 65%, 0.28;
+      --awds-color-brand-dimo-soft-hovered: 213, 90%, 65%, 0.38;
+      --awds-color-brand-dimo-soft-pressed: 213, 90%, 65%, 0.48;
       --awds-color-brand-coni: 213, 100%, 50%, 1;
-      --awds-color-brand-coni-hovered: 213, 100%, 50%, .8;
-      --awds-color-brand-coni-pressed: 213, 100%, 45%, .7;
-      --awds-color-brand-coni-soft: 213, 100%, 50%, .28;
-      --awds-color-brand-coni-soft-hovered: 213, 100%, 50%, .38;
-      --awds-color-brand-coni-soft-pressed: 213, 100%, 50%, .48;
+      --awds-color-brand-coni-hovered: 213, 100%, 50%, 0.8;
+      --awds-color-brand-coni-pressed: 213, 100%, 45%, 0.7;
+      --awds-color-brand-coni-soft: 213, 100%, 50%, 0.28;
+      --awds-color-brand-coni-soft-hovered: 213, 100%, 50%, 0.38;
+      --awds-color-brand-coni-soft-pressed: 213, 100%, 50%, 0.48;
       --awds-color-brand-voci: 25, 90%, 55%, 1;
-      --awds-color-brand-voci-hovered: 25, 90%, 55%, .8;
-      --awds-color-brand-voci-pressed: 25, 90%, 50%, .7;
-      --awds-color-brand-voci-soft: 25, 90%, 55%, .28;
-      --awds-color-brand-voci-soft-hovered: 25, 90%, 55%, .38;
-      --awds-color-brand-voci-soft-pressed: 25, 90%, 55%, .48;
+      --awds-color-brand-voci-hovered: 25, 90%, 55%, 0.8;
+      --awds-color-brand-voci-pressed: 25, 90%, 50%, 0.7;
+      --awds-color-brand-voci-soft: 25, 90%, 55%, 0.28;
+      --awds-color-brand-voci-soft-hovered: 25, 90%, 55%, 0.38;
+      --awds-color-brand-voci-soft-pressed: 25, 90%, 55%, 0.48;
 
       --awds-color-data-red: 11, 78%, 63%, 1;
-      --awds-color-data-red-soft: 11, 78%, 63%, .3;
+      --awds-color-data-red-soft: 11, 78%, 63%, 0.3;
       --awds-color-data-yellow: 11, 83%, 60%, 1;
-      --awds-color-data-yellow-soft: 11, 83%, 60%, .3;
+      --awds-color-data-yellow-soft: 11, 83%, 60%, 0.3;
       --awds-color-data-green: 155, 68%, 42%, 1;
-      --awds-color-data-green-soft: 155, 68%, 42%, .3;
+      --awds-color-data-green-soft: 155, 68%, 42%, 0.3;
       --awds-color-data-cyan: 194, 73%, 60%, 1;
-      --awds-color-data-cyan-soft: 194, 73%, 60%, .3;
+      --awds-color-data-cyan-soft: 194, 73%, 60%, 0.3;
       --awds-color-data-purple: 252, 80%, 70%, 1;
-      --awds-color-data-purple-soft: 252, 80%, 70%, .3;
+      --awds-color-data-purple-soft: 252, 80%, 70%, 0.3;
       --awds-color-data-gold: 48, 90%, 56%, 1;
-      --awds-color-data-gold-soft: 48, 90%, 56%, .3;
+      --awds-color-data-gold-soft: 48, 90%, 56%, 0.3;
       --awds-color-data-pink: 337, 83%, 64%, 1;
-      --awds-color-data-pink-soft: 337, 83%, 64%, .3;
+      --awds-color-data-pink-soft: 337, 83%, 64%, 0.3;
       --awds-color-data-mint: 164, 90%, 40%, 1;
-      --awds-color-data-mint-soft: 164, 90%, 40%, .3;
+      --awds-color-data-mint-soft: 164, 90%, 40%, 0.3;
 
       --awds-color-semantic-information: 213, 97%, 55%, 1;
       --awds-color-semantic-notice: 34, 97%, 49%, 1;
@@ -241,7 +240,7 @@
     @apply bg-background-primary text-content-secondary;
   }
 }
- 
+
 @layer components {
   .flex-centered {
     @apply flex flex-col items-center justify-center;
