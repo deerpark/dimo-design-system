@@ -9,6 +9,10 @@ export type StyleOptionProps<P> = P & {
   variant?: ComponentVariant
   shadow?: boolean
   padding?: boolean
+  icon?: boolean
+  badge?: boolean
+  circle?: boolean
+  link?: boolean
 }
 
 export type CommonProps = {
