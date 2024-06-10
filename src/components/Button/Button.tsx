@@ -25,6 +25,29 @@ const SIZE_CLASSES = {
   large: 'text-label1',
 }
 
+const PADDING_CLASSES = {
+  mini: {
+    icon: 'p-1',
+    default: 'px-2 py-0.5',
+  },
+  small: {
+    icon: 'p-1.5',
+    default: 'px-3 py-1.5',
+  },
+  medium: {
+    icon: 'p-2',
+    default: 'px-[14px] py-2',
+  },
+  default: {
+    icon: 'p-2.5',
+    default: 'px-4 py-2.5',
+  },
+  large: {
+    icon: 'p-3',
+    default: 'px-4 py-3',
+  },
+}
+
 const getClasses = ({
   size,
   variant,
@@ -35,8 +58,8 @@ const getClasses = ({
 }: ButtonComponentStyleProps) => {
   const sizeClass = SIZE_CLASSES[size]
   const paddingClass = icon
-    ? `p-${size === 'mini' ? 1 : size === 'small' ? 1.5 : size === 'medium' ? 2 : size === 'large' ? 3 : 2.5}`
-    : `px-${size === 'mini' ? 2 : size === 'small' ? 3 : size === 'medium' ? '[14px]' : 4} py-${size === 'mini' ? 0.5 : size === 'small' ? 1.5 : size === 'medium' ? 2 : 2.5}`
+    ? PADDING_CLASSES[size].icon
+    : PADDING_CLASSES[size].default
   const roundedClass = circle ? 'rounded-full' : 'rounded-md'
   const underlineClass = link ? 'underline underline-offset-2' : ''
 

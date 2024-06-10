@@ -26,6 +26,9 @@ export default function ButtonPage() {
           <Button size='default'>외부채널 편성</Button>
           <Button size='small'>편성정보 조회</Button>
           <Button size='mini'>초기화</Button>
+          <Button size='mini' anchor href='/'>
+            홈으로 이동
+          </Button>
         </Box>
         <div id='outline'>
           <h3 className='top-10 text-base font-bold'>Outline</h3>
