@@ -12,16 +12,12 @@ export default function Box({
   ...props
 }: PropsWithChildren<StyleOptionProps<CommonProps>>) {
   const classnames = cx(
+    'group-hover:opacity-75 bg-background-primary',
     {
       'rounded-md': rounded,
-      'border-px': border,
-      'shadow dark:dhadow-dk': shadow,
+      shadow: shadow,
       'p-5': padding,
-      'group-hover:opacity-75': true,
-    },
-    {
-      'bg-background-primary dark:bg-inverse-background-primary': true,
-      'border-border-secondary dark:border-inverse-border-secondary': border,
+      'border-px border-border-secondary': border,
     },
     className
   )

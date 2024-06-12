@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { Container, Button, Box } from '../../'
+import { Container, Button, Box, ButtonGroup } from '../../'
 
 export default function ButtonPage() {
   const [a, setA] = React.useState(false)
@@ -9,8 +9,10 @@ export default function ButtonPage() {
   return (
     <Container.Root>
       <Container className='flex flex-col gap-y-5'>
-        <div id='solid'>
-          <h3 className='text-base font-bold'>Solid</h3>
+        <div>
+          <h3 id='solid' className='text-base font-bold'>
+            Solid
+          </h3>
           <p className='font-mono text-xs opacity-50'>variants="solid"</p>
         </div>
         <Box
@@ -30,8 +32,10 @@ export default function ButtonPage() {
             홈으로 이동
           </Button>
         </Box>
-        <div id='outline'>
-          <h3 className='top-10 text-base font-bold'>Outline</h3>
+        <div>
+          <h3 id='outline' className='top-10 text-base font-bold'>
+            Outline
+          </h3>
           <p className='font-mono text-xs opacity-50'>variants="outline"</p>
         </div>
         <Box
@@ -60,8 +64,10 @@ export default function ButtonPage() {
             주문콜
           </Button>
         </Box>
-        <div id='ghost'>
-          <h3 className='top-10 text-base font-bold'>Ghost</h3>
+        <div>
+          <h3 id='ghost' className='top-10 text-base font-bold'>
+            Ghost
+          </h3>
           <p className='font-mono text-xs opacity-50'>variants="ghost"</p>
         </div>
         <Box
@@ -85,8 +91,10 @@ export default function ButtonPage() {
             SR
           </Button>
         </Box>
-        <div id='solid'>
-          <h3 className='text-base font-bold'>Solid with icon</h3>
+        <div>
+          <h3 id='solid-with-icon' className='text-base font-bold'>
+            Solid with icon
+          </h3>
           <p className='font-mono text-xs opacity-50'>variants="solid"</p>
         </div>
         <Box
@@ -178,8 +186,10 @@ export default function ButtonPage() {
             </svg>
           </Button>
         </Box>
-        <div id='group-outline'>
-          <h3 className='top-10 text-base font-bold'>Outline + circle</h3>
+        <div>
+          <h3 id='outline-circle' className='top-10 text-base font-bold'>
+            Outline + circle
+          </h3>
           <p className='font-mono text-xs opacity-50'>
             variants="outline" circle
           </p>
@@ -201,8 +211,10 @@ export default function ButtonPage() {
             테스트
           </Button>
         </Box>
-        <div id='ghost-icon-only'>
-          <h3 className='top-10 text-base font-bold'>Ghost + link</h3>
+        <div>
+          <h3 id='ghost-link' className='top-10 text-base font-bold'>
+            Ghost + link
+          </h3>
           <p className='font-mono text-xs opacity-50'>variants="ghost" link</p>
         </div>
         <Box
@@ -222,8 +234,10 @@ export default function ButtonPage() {
             테스트
           </Button>
         </Box>
-        <div id='ghost-icon-only'>
-          <h3 className='top-10 text-base font-bold'>Ghost + icon + circle</h3>
+        <div>
+          <h3 id='ghost-icon-circle' className='top-10 text-base font-bold'>
+            Ghost + icon + circle
+          </h3>
           <p className='font-mono text-xs opacity-50'>
             variants="ghost" icon circle
           </p>
@@ -280,6 +294,24 @@ export default function ButtonPage() {
               ></path>
             </svg>
           </Button>
+        </Box>
+        <div>
+          <h3 id='button-group' className='top-10 text-base font-bold'>
+            Group
+          </h3>
+        </div>
+        <Box
+          className='mb-2 flex items-center gap-x-2'
+          padding
+          rounded
+          border
+          shadow
+        >
+          <ButtonGroup>
+            <Button variant='outline'>테스트</Button>
+            <Button variant='outline'>테스트</Button>
+            <Button variant='outline'>테스트</Button>
+          </ButtonGroup>
         </Box>
       </Container>
     </Container.Root>

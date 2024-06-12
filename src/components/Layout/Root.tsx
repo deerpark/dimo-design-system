@@ -1,18 +1,19 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import { Link, Outlet, useParams } from 'react-router-dom'
-import { cx } from '../../lib/utils'
+import { cx, getVersion } from '../../lib/utils'
 import {
   DimoNavigationState,
   NavigationPage,
   useDimoNav,
 } from '../../router.config'
+
 export default function Root() {
   const params = useParams() as DimoNavigationState
   const dimoNav = useDimoNav()
   const pages = Object.keys(dimoNav.pages) as NavigationPage[]
   return (
     <div className='min-w-screen flex min-h-screen flex-1 flex-col'>
-      <header className='shrink-0 border-b border-gray-200 bg-white'>
+      <header className='shadow-custom shrink-0 bg-white'>
         <div className='mx-auto flex h-16 max-w-7xl items-center px-4 sm:px-6 lg:px-8'>
           <div className='flex flex-none items-center space-x-3'>
             <Link to='/design-system/components'>
@@ -31,7 +32,7 @@ export default function Root() {
               </svg>
             </Link>
             <div className='flex items-center rounded-full bg-slate-400/10 px-3 py-1 text-xs font-semibold leading-5'>
-              v3.3.2
+              {getVersion()}
             </div>
           </div>
           <div className='flex-1' />

@@ -85,6 +85,13 @@
     --awds-color-gsshop-aquablue: 185, 84%, 38%, 1;
     --awds-color-gsshop-earthbrown: 56, 21%, 29%, 1;
 
+    --awds-shadow-default: 0px 0px 0px 1px rgba(14, 63, 126, 0.04),
+      0px 1px 1px -0.5px rgba(14, 63, 126, 0.04),
+      0px 3px 3px -1.5px rgba(14, 63, 126, 0.04),
+      0px 6px 6px -3px rgba(14, 63, 126, 0.04),
+      0px 12px 12px -6px rgba(14, 63, 126, 0.04),
+      0px 24px 24px -12px rgba(14, 63, 126, 0.04);
+
     .dark {
       --awds-color-content-primary: 220, 5%, 90%, 1;
       --awds-color-content-secondary: 220, 10%, 72%, 1;
@@ -154,6 +161,13 @@
       --awds-color-gsshop-sunsetpink: 341, 84%, 50%, 1;
       --awds-color-gsshop-aquablue: 185, 79%, 40%, 1;
       --awds-color-gsshop-earthbrown: 56, 28%, 30%, 1;
+
+      --awds-shadow-default: 0px 0px 0px 1px rgba(226, 232, 240, 0.04),
+        0px 1px 1px -0.5px rgba(226, 232, 240, 0.04),
+        0px 3px 3px -1.5px rgba(226, 232, 240, 0.04),
+        0px 6px 6px -3px rgba(226, 232, 240, 0.04),
+        0px 12px 12px -6px rgba(226, 232, 240, 0.04),
+        0px 24px 24px -12px rgba(226, 232, 240, 0.04);
     }
 
     --awds-font-size-11: 11px;

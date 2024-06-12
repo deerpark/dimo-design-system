@@ -1,6 +1,8 @@
 import { clsx, ClassValue } from 'clsx'
 import { extendTailwindMerge } from 'tailwind-merge'
 
+import versionData from '../version.json'
+
 const customMerge = extendTailwindMerge({
   extend: {
     classGroups: {
@@ -28,4 +30,8 @@ const customMerge = extendTailwindMerge({
 
 export function cx(...inputs: ClassValue[]) {
   return customMerge(clsx(inputs))
+}
+
+export function getVersion(): string {
+  return versionData.version
 }

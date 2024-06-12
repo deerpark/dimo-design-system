@@ -152,6 +152,9 @@ module.exports = {
       borderWidth: {
         1: '1.5px',
       },
+      boxShadow: {
+        custom: 'var(--awds-shadow-default)',
+      },
       colors,
     },
   },

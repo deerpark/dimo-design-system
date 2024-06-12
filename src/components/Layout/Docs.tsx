@@ -1,5 +1,5 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import { useEffect } from 'react'
+import * as React from 'react'
 import { Outlet, useLocation, useParams } from 'react-router-dom'
 import { Disclosure } from '@headlessui/react'
 import { ChevronRightIcon } from '@heroicons/react/20/solid'
@@ -7,6 +7,7 @@ import { DimoNavigationState, useDimoNav } from '../../router.config'
 import { cx } from '../../lib/utils'
 import ButtonPage from '../Docs/Button'
 import NavigationPage from '../Docs/Navigation'
+import Toc from './Toc'
 
 export default function Layout() {
   return <Outlet />
@@ -19,7 +20,7 @@ function LayoutSub() {
     '#',
     ''
   ) as DimoNavigationState['hash']
-  useEffect(() => {
+  React.useEffect(() => {
     setDimoNav({
       ...params,
       hash: hash || (hashs?.length ? hashs[0].name : undefined),
@@ -141,7 +142,7 @@ function LayoutSub() {
                   </>
                 )}
               </div>
-              <div className='flex-1'>
+              <div id='contents' className='flex-1'>
                 <Outlet />
               </div>
             </div>
@@ -149,14 +150,15 @@ function LayoutSub() {
         </div>
         <div className='flex-centered flex-none'>
           <div className='flex-centered container py-10 text-xs text-slate-300 dark:text-slate-700'>
-            &copy; DT Hub
+            &copy; Agile Works
           </div>
         </div>
       </main>
 
       <aside className='sticky top-8 hidden w-44 shrink-0 xl:block'>
         <ul className='-mx-2 space-y-1'>
-          {hashs
+          <Toc />
+          {/* {hashs
             ? hashs.map(subItem => (
                 <li key={subItem.name}>
                   <a
@@ -172,7 +174,7 @@ function LayoutSub() {
                   </a>
                 </li>
               ))
-            : null}
+            : null} */}
         </ul>
       </aside>
     </div>

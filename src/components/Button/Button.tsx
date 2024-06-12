@@ -1,6 +1,6 @@
 import * as React from 'react'
 import { cx } from '../../lib/utils'
-import { StyleOptionProps } from '../../interfaces'
+import { CommonProps, StyleOptionProps } from '../../interfaces'
 import { Button as HeadlessButton } from '@headlessui/react'
 
 type ButtonComponentStyleProps = Pick<
@@ -60,7 +60,9 @@ const getClasses = ({
   const paddingClass = icon
     ? PADDING_CLASSES[size].icon
     : PADDING_CLASSES[size].default
-  const roundedClass = circle ? 'rounded-full' : 'rounded-md'
+  const roundedClass = circle
+    ? 'rounded-full'
+    : 'rounded-md group-has-[.button]/button:rounded-none group-has-[.button]/button:first-of-type:rounded-l-md group-has-[.button]/button:last-of-type:rounded-r-md focus:!rounded-md active:!rounded-md'
   const underlineClass = link ? 'underline underline-offset-2' : ''
 
   const variantClass = {
@@ -68,8 +70,8 @@ const getClasses = ({
       ? 'text-content-basic bg-brand-primary'
       : 'text-content-secondary bg-background-secondary',
     outline: primary
-      ? 'text-brand-primary border focus:border-transparent active:border-transparent border-brand-primary'
-      : 'text-content-secondary border focus:border-transparent active:border-transparent border-border-secondary',
+      ? 'text-brand-primary border border-brand-primary focus:border-transparent active:border-transparent'
+      : 'text-content-secondary border border-border-secondary focus:border-transparent active:border-transparent',
     ghost: primary ? 'text-brand-primary' : 'text-content-secondary',
   }[variant]
 
@@ -95,9 +97,9 @@ const ButtonComponent = React.forwardRef<HTMLElement, ButtonComponentProps>(
     ref
   ) => {
     const classnames = cx(
-      'inline-flex items-center justify-center space-x-1 outline-none transition-all whitespace-nowrap shrink-0',
+      'button inline-flex items-center justify-center space-x-1 outline-none transition-all whitespace-nowrap shrink-0',
       'hover:opacity-70',
-      'focus:ring-2 focus:ring-brand-primary focus:z-20',
+      'focus:ring-2 focus:ring-brand-primary focus:ring-offset-1 group-has-[.button]/button:ring-offset-0 focus:z-20',
       'disabled:text-content-disabled disabled:opacity-50 disabled:cursor-not-allowed',
       badge && 'text-brand-sunsetPink',
       getClasses({ size, variant, primary, icon, circle, link }),
@@ -141,5 +143,16 @@ const ButtonComponent = React.forwardRef<HTMLElement, ButtonComponentProps>(
     )
   }
 )
+
+export const Group = ({
+  children,
+  className,
+}: React.PropsWithChildren<StyleOptionProps<CommonProps>>) => {
+  const classnames = cx(
+    'inline-flex items-stretch -space-x-px group/button px-px',
+    className
+  )
+  return <div className={classnames}>{children}</div>
+}
 
 export default React.memo(ButtonComponent)
