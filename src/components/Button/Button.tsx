@@ -1,7 +1,7 @@
-import * as React from 'react'
-import { cx } from '../../lib/utils'
-import { CommonProps, StyleOptionProps } from '../../interfaces'
 import { Button as HeadlessButton } from '@headlessui/react'
+import * as React from 'react'
+import { CommonProps, StyleOptionProps } from '../../interfaces'
+import { cx } from '../../lib/utils'
 
 type ButtonComponentStyleProps = Pick<
   Required<StyleOptionProps<{}>>,

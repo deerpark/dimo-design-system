@@ -8,6 +8,7 @@ import { cx } from '../../lib/utils'
 import ButtonPage from '../Docs/Button'
 import NavigationPage from '../Docs/Navigation'
 import Toc from './Toc'
+import TypographyPage from '../Docs/Typography'
 
 export default function Layout() {
   return <Outlet />
@@ -15,17 +16,14 @@ export default function Layout() {
 
 function LayoutSub() {
   const params = useParams() as DimoNavigationState
-  const { current, page, components, hashs, setDimoNav } = useDimoNav(params)
-  const hash = useLocation().hash?.replace(
-    '#',
-    ''
-  ) as DimoNavigationState['hash']
+  const { current, page, components, setDimoNav } = useDimoNav(params)
+  const hash = useLocation().hash?.replace('#', '')
   React.useEffect(() => {
     setDimoNav({
       ...params,
-      hash: hash || (hashs?.length ? hashs[0].name : undefined),
+      hash,
     })
-  }, [params, hash, hashs, setDimoNav])
+  }, [params, hash, setDimoNav])
   return (
     <div className='mx-auto flex w-full max-w-7xl flex-1 items-start gap-x-8 px-4 py-10 sm:px-6 lg:px-8'>
       {components?.length ? (
@@ -113,7 +111,7 @@ function LayoutSub() {
         <div className='flex-centered flex flex-1 flex-col'>
           <div className='container flex flex-1 flex-col'>
             <div className='flex flex-1 flex-col'>
-              <h2 className='flex-none text-2xl capitalize text-slate-900 dark:text-slate-100'>
+              <h2 className='flex-none text-2xl capitalize text-content-primary'>
                 {(params.section || params.component || page)?.replaceAll(
                   '-',
                   ' '
@@ -149,7 +147,7 @@ function LayoutSub() {
           </div>
         </div>
         <div className='flex-centered flex-none'>
-          <div className='flex-centered container py-10 text-xs text-slate-300 dark:text-slate-700'>
+          <div className='flex-centered container py-10 text-xs text-content-tertiary'>
             &copy; Agile Works
           </div>
         </div>
@@ -158,23 +156,6 @@ function LayoutSub() {
       <aside className='sticky top-8 hidden w-44 shrink-0 xl:block'>
         <ul className='-mx-2 space-y-1'>
           <Toc />
-          {/* {hashs
-            ? hashs.map(subItem => (
-                <li key={subItem.name}>
-                  <a
-                    href={subItem.href}
-                    className={cx(
-                      subItem.name === (current.hash?.name || hashs[0].name)
-                        ? 'text-brand-primary'
-                        : 'text-slate-400 hover:text-slate-300 hover:underline',
-                      'block rounded-md px-2 py-1 text-xs capitalize leading-4 underline-offset-2'
-                    )}
-                  >
-                    {subItem.name.replaceAll('-', ' ')}
-                  </a>
-                </li>
-              ))
-            : null} */}
         </ul>
       </aside>
     </div>
@@ -193,7 +174,7 @@ function LayoutContents() {
 
 function NotFond() {
   return (
-    <div className='flex-centered flex flex-1 pb-40 pt-20 text-slate-400 dark:text-slate-500'>
+    <div className='flex-centered flex flex-1 pb-40 pt-20 text-content-tertiary'>
       페이지를 찾을 수 없습니다.
     </div>
   )
@@ -205,6 +186,8 @@ function LayoutSubContents() {
     component === 'forms' ? (
       section === 'button' ? (
         <ButtonPage />
+      ) : section === 'typography' ? (
+        <TypographyPage />
       ) : (
         <NotFond />
       )

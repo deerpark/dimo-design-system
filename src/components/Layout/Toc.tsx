@@ -16,10 +16,12 @@ export default function Toc() {
       .getElementById('contents')
       ?.getElementsByTagName('h3')
     setToc(
-      (hashes ? Array.from(hashes) : [])?.map(h3 => ({
-        name: h3.textContent,
-        href: h3.id,
-      })) as unknown as SubSubItem[]
+      (hashes ? Array.from(hashes) : [])
+        ?.filter(h3 => h3.role === 'navigation')
+        .map(h3 => ({
+          name: h3.textContent,
+          href: h3.id,
+        })) as SubSubItem[]
     )
   }, [])
   return (

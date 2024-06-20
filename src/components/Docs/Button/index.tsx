@@ -10,7 +10,7 @@ export default function ButtonPage() {
     <Container.Root>
       <Container className='flex flex-col gap-y-5'>
         <div>
-          <h3 id='solid' className='text-base font-bold'>
+          <h3 id='solid' className='text-base font-bold' role='navigation'>
             Solid
           </h3>
           <p className='font-mono text-xs opacity-50'>variants="solid"</p>
@@ -33,7 +33,11 @@ export default function ButtonPage() {
           </Button>
         </Box>
         <div>
-          <h3 id='outline' className='top-10 text-base font-bold'>
+          <h3
+            id='outline'
+            className='top-10 text-base font-bold'
+            role='navigation'
+          >
             Outline
           </h3>
           <p className='font-mono text-xs opacity-50'>variants="outline"</p>
@@ -65,7 +69,11 @@ export default function ButtonPage() {
           </Button>
         </Box>
         <div>
-          <h3 id='ghost' className='top-10 text-base font-bold'>
+          <h3
+            id='ghost'
+            className='top-10 text-base font-bold'
+            role='navigation'
+          >
             Ghost
           </h3>
           <p className='font-mono text-xs opacity-50'>variants="ghost"</p>
@@ -92,7 +100,11 @@ export default function ButtonPage() {
           </Button>
         </Box>
         <div>
-          <h3 id='solid-with-icon' className='text-base font-bold'>
+          <h3
+            id='solid-with-icon'
+            className='text-base font-bold'
+            role='navigation'
+          >
             Solid with icon
           </h3>
           <p className='font-mono text-xs opacity-50'>variants="solid"</p>
@@ -187,7 +199,11 @@ export default function ButtonPage() {
           </Button>
         </Box>
         <div>
-          <h3 id='outline-circle' className='top-10 text-base font-bold'>
+          <h3
+            id='outline-circle'
+            className='top-10 text-base font-bold'
+            role='navigation'
+          >
             Outline + circle
           </h3>
           <p className='font-mono text-xs opacity-50'>
@@ -212,7 +228,11 @@ export default function ButtonPage() {
           </Button>
         </Box>
         <div>
-          <h3 id='ghost-link' className='top-10 text-base font-bold'>
+          <h3
+            id='ghost-link'
+            className='top-10 text-base font-bold'
+            role='navigation'
+          >
             Ghost + link
           </h3>
           <p className='font-mono text-xs opacity-50'>variants="ghost" link</p>
@@ -235,7 +255,11 @@ export default function ButtonPage() {
           </Button>
         </Box>
         <div>
-          <h3 id='ghost-icon-circle' className='top-10 text-base font-bold'>
+          <h3
+            id='ghost-icon-circle'
+            className='top-10 text-base font-bold'
+            role='navigation'
+          >
             Ghost + icon + circle
           </h3>
           <p className='font-mono text-xs opacity-50'>
@@ -296,7 +320,11 @@ export default function ButtonPage() {
           </Button>
         </Box>
         <div>
-          <h3 id='button-group' className='top-10 text-base font-bold'>
+          <h3
+            id='button-group'
+            className='top-10 text-base font-bold'
+            role='navigation'
+          >
             Group
           </h3>
         </div>

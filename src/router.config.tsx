@@ -16,16 +16,11 @@ export const navigation = {
         {
           name: 'button',
           href: '/design-system/components/forms/button',
-          children: [
-            { name: 'solid', href: '#solid' },
-            { name: 'outline', href: '#outline' },
-            { name: 'ghost', href: '#ghost' },
-            { name: 'group-solid', href: '#group-solid' },
-            { name: 'group-outline', href: '#group-outline' },
-            { name: 'ghost-icon-only', href: '#ghost-icon-only' },
-          ],
         },
-        { name: 'text', href: '/design-system/components/forms/text' },
+        {
+          name: 'typography',
+          href: '/design-system/components/forms/typography',
+        },
         {
           name: 'select-box',
           href: '/design-system/components/forms/select-box',
@@ -135,17 +130,12 @@ type NavigationComponentObj = Extract<
   { children: any }
 >['children'][number]
 type NavigationSection = NavigationComponentObj['name']
-type NavigationSectionObject = Extract<
-  NavigationComponentObj,
-  { children: any }
->['children'][number]
-type NavigationContentsHash = NavigationSectionObject['name']
 
 export type DimoNavigationState = {
   page: NavigationPage
   component?: NavigationComponent
   section?: NavigationSection
-  hash?: NavigationContentsHash
+  hash?: string
 }
 
 export function useDimoNav(
@@ -155,7 +145,7 @@ export function useDimoNav(
 ) {
   const [dimoNav, setDimoNav] = useState<DimoNavigationState>(params)
 
-  const { page, component, section, hash } = dimoNav
+  const { page, component, section } = dimoNav
 
   /**
    * 컴포넌트 객체 목록 ex) [{forms},{lists}],
@@ -176,14 +166,6 @@ export function useDimoNav(
   }, [components, component])
 
   /**
-   * 컨텐츠 해시 객체 목록 ex) [{solid},{outline}],
-   */
-  const hashs = useMemo(() => {
-    const parent = sections && sections.find(c => c.name === section)
-    return parent && 'children' in parent ? parent.children : undefined
-  }, [sections, section])
-
-  /**
    * 현재 하이라이트 된 객체
    */
   const current = useMemo(() => {
@@ -191,9 +173,8 @@ export function useDimoNav(
       page: navigation[page],
       component: components && components.find(c => c.name === component),
       section: sections && sections.find(s => s.name === section),
-      hash: hashs && hashs.find(h => h.name === hash),
     }
-  }, [components, sections, hashs, page, component, section, hash])
+  }, [components, sections, page, component, section])
 
-  return { ...dimoNav, pages, components, sections, hashs, current, setDimoNav }
+  return { ...dimoNav, pages, components, sections, current, setDimoNav }
 }
